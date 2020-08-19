@@ -1,0 +1,148 @@
+.section-skills {
+    position: relative;
+    padding: 5rem 0;
+    background-image: inherit;
+    backdrop-filter: blur(2.5rem);
+    margin: 15rem 6rem 0;
+    box-shadow: 0 1rem 4rem rgba($color-black, .6);
+    @include respond(mobile){
+        padding: 5rem 0 3rem;
+        margin: 15rem 3rem 0;
+    }
+}
+
+.skill-heading {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    &-primary{
+        font-size: 6rem;
+        font-weight: 600;
+        background-image: linear-gradient(to right, $color-purple-shade, $color-purple-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    &-secondary{
+        font-size: 2rem;
+        font-weight: 200;
+        color: $color-white;
+        transform: translate(1rem, 1rem);
+    }
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 6rem;
+    padding: 10rem 10rem;
+    max-width: 120rem;
+    margin-top: 8rem;
+
+    @include respond(tab-port){
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 2rem;
+        margin: 20rem auto 0;
+        padding: 0 10rem;
+        align-self: center;
+    }
+    @include respond(mobile){
+        padding: 0;
+        margin: 18rem auto 0;
+    }
+
+    &-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 4rem;
+        align-items: center;
+        justify-items: center;
+        padding: 3rem;
+        font-size: 7rem;
+
+        @include respond(mobile){
+            grid-column-gap: 2rem;
+        }
+
+        &-html {
+            background-image: linear-gradient(to right, $html-orange-1 0%, $html-orange-1 50%, $html-orange-2 50%, $html-orange-2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 8rem;
+        }
+
+        &-css {
+            background-image: linear-gradient(to right, $css-blue-1 0%, $css-blue-1 50%, $css-blue-2 50%, $css-blue-2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 8rem;
+        }
+
+        &-js {
+            color: #F0DB4F;
+            font-size: 7.5rem;
+       }
+
+        &-sass {
+            color: $sass-pink;
+        }
+
+        &-bootstrap {
+            background-image: linear-gradient(to right, $bootstrap-purple-1, $bootstrap-purple-2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 7.5rem;
+        }
+
+        &-node {
+            background-image: linear-gradient(to right, $node-green-dark, $node-green-light);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        &-react {
+            color: $react-blue;
+        }
+
+        &-vue {
+            background-image: linear-gradient(to bottom, $vue-green-dark, $vue-green);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 7.5rem;
+        }
+
+        &-git{
+            color: #f05033;
+            font-size: 8rem;
+        }
+
+        &-npm{
+            color: #d60000;
+            font-size: 8rem;
+        }
+    }
+
+    &-vector {
+        @include respond(tab-port){
+            grid-row-start: 1;
+            justify-self: center;
+        }
+
+        img {
+            width: 40rem;
+            border-radius: 1rem;
+            box-shadow: 0 1rem 4rem rgba($color-black, .6);
+        }
+    }
+}

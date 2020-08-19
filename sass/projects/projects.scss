@@ -1,0 +1,221 @@
+.section-projects{
+    padding: 5rem 0 0;
+    margin: 10rem 6rem;
+    background-image: linear-gradient(to bottom right, $color-new-1, $color-new-2);
+    box-shadow: 0 2rem 4rem rgba($color-black, .6);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 115vh;
+
+    @include respond(tab-port){
+        height: 140vh;
+    }
+
+    @include respond(mobile){
+        height: 90vh;
+        margin: 10rem 3rem;
+    }
+}
+
+.project-heading{
+    color: $color-white;
+    font-size: 5rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border: 2px solid $color-white;
+    display: inline-block;
+
+    @include respond(mobile){
+        font-size: 4rem;
+        font-weight: 400;
+    }
+}
+
+.slider-arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 6rem;
+    color: $color-white;
+    display: inline-block;
+    transform: translate(0, -50%) scale(1);
+    transition: all .2s ease;
+    &:hover{
+        transform: translate(0, -50%) scale(1.2);
+    }
+    &:active{
+        transform: translate(0, -50%) scale(1);
+    }
+    &-left{
+        left: 2%;
+        @include respond(tab-port){
+            left: 2rem;
+        }
+        @include respond(mobile){
+            font-size: 4rem;
+            left: 1rem;
+        }
+    }
+
+    &-right{
+        right: 2%;
+        @include respond(tab-port){
+            right: 2rem;
+        }
+        @include respond(mobile){
+            font-size: 4rem;
+            right: 1rem;
+        }
+    }
+}
+
+.project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4rem;
+    justify-self: center;
+    margin: 10rem 15rem 0;
+    text-align: left;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+
+    @include respond(tab-port){
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr 1fr;
+        grid-column-gap: 0;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include respond(mobile){
+        // margin: 6rem 0 0;
+    }
+
+    &-description{
+        color: $color-white;
+        margin-top: 10rem;
+        justify-self: left;
+        @include respond(mobile){
+            margin-top: 0;
+        }
+    }
+
+    &-title{
+        font-size: 5rem;
+
+        @include respond(mobile){
+            font-size: 3.5rem;
+        }
+    }
+
+    &-about{
+        font-size: 2rem;
+        font-weight: 300;
+        margin-top: 2rem;
+
+        @include respond(mobile){
+            margin-top: 0;
+        }
+    }
+
+    &-button{
+        &:link,
+        &:visited{
+            font-size: 2rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+            background-color: $color-white;
+            border-radius: 2rem;
+            color: $color-new-1;
+            @include respond(tab-port){
+                display: none;
+            }
+        }
+    }
+
+    &-snap{
+        height: 55rem;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        box-shadow: 0 1rem 4rem rgba($color-black, .6);
+        margin-bottom: -3px;
+        justify-self: right;
+
+        &-wip{
+            opacity: 0;
+        }
+
+        &:hover{
+            box-shadow: 0 1rem 4rem rgba($color-white, .6);
+        }
+
+        @include respond(tab-port){
+            height: 60rem;
+            margin-top: 4rem;
+        }
+
+        @include respond(mobile){
+            height: 55rem;
+        }
+    }
+}
+
+.natour-project-preview{
+    position: relative;
+}
+
+.wip-project-preview{
+    background-color: rgba($color-black, .6);
+    position: relative;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    box-shadow: 0 1rem 4rem rgba($color-black, .6);
+    margin-bottom: -3px;
+
+    @include respond(tab-port){
+        height: 60rem;
+        margin-top: 4rem;
+    }
+    @include respond(mobile){
+        height: 55rem;
+    }
+}
+
+.project-1{
+    opacity: 1;
+    z-index: 5;
+}
+
+.project-2{
+    opacity: 0;
+    z-index: -5;
+}
+
+#test-1, #test-2{
+    display: none;
+}
+
+#test-1:checked ~ .project-1{
+    opacity: 0;
+    z-index: -5;
+}
+
+#test-1:checked ~ .project-2{
+    opacity: 1;
+    z-index: 5;
+}
+
+#test-2:checked ~ .project-2{
+    opacity: 1;
+    z-index: 5;
+}
+
+#test-2:checked ~ .project-1{
+    opacity: 0;
+    z-index: -5;
+}

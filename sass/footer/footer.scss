@@ -1,0 +1,122 @@
+footer {
+    position: relative;
+    margin-top: 10rem;
+    background-image: linear-gradient(to right, $color-new-1, $color-new-2);
+    padding: 3rem;
+    text-align: center;
+}
+
+.social-icons {
+    list-style: none;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 3rem;
+    padding: 1rem;
+    transition: all 0.2s;
+    @include respond(mobile) {
+        font-size: 3.5rem;
+    }
+
+    &-email {
+        color: $javascript-yellow;
+        transform: translateY(-3px);
+    }
+
+    &-upwork-image {
+        width: 3rem;
+        border-radius: 0.3rem;
+        @include respond(mobile) {
+            width: 3.5rem;
+        }
+    }
+
+    &-linkedin-image {
+        width: 3rem;
+        border-radius: 0.3rem;
+        @include respond(mobile) {
+            width: 3.5rem;
+        }
+    }
+
+    &-stack-image {
+        width: 3rem;
+        @include respond(mobile) {
+            width: 3.5rem;
+        }
+    }
+
+    &-github {
+        color: black;
+        transform: translateY(-3px);
+        // position: relative;
+
+        // &::after{
+        //     content: "";
+        //     width: 2.5rem;
+        //     height: 2.5rem;
+        //     border-radius: 100%;
+        //     background-color: $color-white;
+        //     position: absolute;
+        //     left: 25%;
+        //     top: 29%;
+        //     z-index: -2;
+        //
+        //     @include respond(mobile){
+        //         width: 3rem;
+        //         height: 3rem;
+        //         top: 26%;
+        //     }
+        // }
+    }
+
+    &:hover {
+        transform: translateY(-.8rem);
+    }
+
+    &-link:link{
+        color: black;
+        
+        &:active{
+
+        }
+    }
+}
+
+.source-links {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $color-white;
+    margin-top: 1rem;
+    @include respond(tab-port) {
+        font-size: 1.4rem;
+    }
+    @include respond(mobile) {
+        font-size: 1.6rem;
+    }
+
+    .footer-link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $react-blue;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+.copyright {
+    margin-top: 2.5rem;
+    color: $color-white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    @include respond(mobile) {
+        font-size: 1.6rem;
+    }
+}

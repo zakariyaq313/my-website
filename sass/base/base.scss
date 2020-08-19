@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+    @include respond(mobile) {
+        font-size: 40%;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../images/landscape.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    @include respond(tab-port) {
+        background-image: url("../images/portrait.jpg");
+        background-size: cover;
+    }
+}
