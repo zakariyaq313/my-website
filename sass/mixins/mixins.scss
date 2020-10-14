@@ -14,7 +14,7 @@
             @content
         };
     }
-    @if $breakpoint == lareg-pc {
+    @if $breakpoint == large-pc {
         @media(max-width: 112.5em){
             @content
         };

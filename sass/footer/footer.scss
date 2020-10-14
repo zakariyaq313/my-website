@@ -1,63 +1,35 @@
 footer {
     position: relative;
-    margin-top: 10rem;
-    background-image: linear-gradient(to right, $color-new-1, $color-new-2);
+    background-image: linear-gradient(to right, $color-light-purple, $color-dark-purple);
+    background-size: cover;
     padding: 3rem;
     text-align: center;
 }
 
 .social-icons {
-    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.social-icon {
-    display: inline-block;
-    font-size: 3rem;
-    padding: 1rem;
-    transition: all 0.2s;
-    @include respond(mobile) {
-        font-size: 3.5rem;
+.logo{
+    width: 3rem;
+    margin: 0 1rem;
+    border-radius: 3px;
+    transition: all .3s;
+    @include respond(mobile){
+        width: 4rem;
     }
 
-    &-email {
-        color: $javascript-yellow;
-        transform: translateY(-3px);
+    &:hover{
+        transform: scale(1.3);
     }
 
-    &-upwork-image {
-        width: 3rem;
-        border-radius: 0.3rem;
-        @include respond(mobile) {
-            width: 3.5rem;
+    &-pluralsight{
+        width: 3.2rem;
+        @include respond(mobile){
+            width: 4rem;
         }
-    }
-
-    &-linkedin-image {
-        width: 3rem;
-        border-radius: 0.3rem;
-        @include respond(mobile) {
-            width: 3.5rem;
-        }
-    }
-
-    &-stack-image {
-        width: 3rem;
-        @include respond(mobile) {
-            width: 3.5rem;
-        }
-    }
-
-    &-github {
-        color: black;
-        transform: translateY(-3px);
-    }
-
-    &:hover {
-        transform: translateY(-.8rem);
-    }
-
-    &-link:link, &:visited{
-        color: black;
     }
 }
 
@@ -65,12 +37,14 @@ footer {
     font-size: 1.2rem;
     font-weight: 500;
     color: $color-white;
-    margin-top: 1rem;
+    margin-top: 2rem;
+
     @include respond(tab-port) {
         font-size: 1.4rem;
     }
+
     @include respond(mobile) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .footer-link {
@@ -89,7 +63,7 @@ footer {
 }
 
 .copyright {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     color: $color-white;
     font-size: 1.5rem;
     font-weight: 500;

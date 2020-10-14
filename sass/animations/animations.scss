@@ -1,0 +1,42 @@
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+svg#freepik_stories-javascript-frameworks:not(.animated) .animable {
+    opacity: 0;
+}
+
+svg#freepik_stories-javascript-frameworks.animated #freepik--JS--inject-2 {
+    animation: 3s Infinite linear floating;
+    animation-delay: 0s;
+}
+
+@keyframes floating {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animator-hidden {
+    display: none;
+}

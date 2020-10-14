@@ -1,0 +1,55 @@
+.heading{
+    display: inline-block;
+    color: $color-white;
+
+    &-primary{
+        font-size: 6rem;
+        font-weight: 600;
+        @include respond(mobile){
+            font-size: 7rem;
+        }
+    }
+
+    &-secondary{
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-top: .5rem;
+        @include respond(mobile){
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.gradient-text{
+    background-image: linear-gradient(to right, $color-light-purple, $color-dark-purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.icon{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    &-html{
+        background-image: linear-gradient(to right, $html-orange-1 0%, $html-orange-1 50%, $html-orange-2 50%, $html-orange-2 100%);
+    }
+
+    &-css{
+        background-image: linear-gradient(to right, $css-blue-1 0%, $css-blue-1 50%, $css-blue-2 50%, $css-blue-2 100%);
+    }
+}
+
+.react-icon{
+    color: $react-blue;
+}
+
+.js-icon{
+    color: #F0DB4F;
+}
+
+.sass-icon{
+    color: $sass-pink;
+}

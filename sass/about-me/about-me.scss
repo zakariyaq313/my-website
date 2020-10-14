@@ -1,78 +1,50 @@
 .section-about-me {
     position: relative;
-    padding: 5rem 0;
-    @include respond(tab-port){
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
+    @include respond(mobile){
+        flex-direction: column;
+    }
+
+    img{
+        width: 40%;
+
+        @include respond(mobile){
+            width: 90%;
+        }
     }
 }
 
-.about-me{
-    text-align: center;
-    color: $color-white;
-    width: 40rem;
-    height: 50rem;
-    margin: 0 auto;
-    background-image: inherit;
-    backdrop-filter: blur(2.5rem);
-    box-shadow: 0 1rem 4rem rgba($color-black, .6);
-    border-radius: 1rem;
+.about-me {
+    margin: 0;
+    @include respond(mobile){
+        margin-top: 5rem;
+        text-align: center;
+    }
 
     .heading-3 {
         display: inline-block;
         font-size: 6rem;
-        font-weight: 200;
-        letter-spacing: 4px;
-        margin-top: 10rem;
+        font-weight: 400;
+        color: $color-light-purple;
+        @include respond(mobile){
+            font-size: 7rem;
+        }
     }
 
     .paragraph {
-        margin-top: 4rem;
         font-size: 2rem;
-        line-height: 3rem;
-        font-weight: 200;
-        margin: 4rem 5rem 0;
+        line-height: 1.6;
+        font-weight: 400;
+        color: $color-gray;
+        margin-top: 3rem;
+        width: 45rem;
+        @include respond(mobile){
+            font-size: 2.5rem;
+        }
     }
 }
-
-
-
-// .about-card {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     height: 55rem;
-//     width: 40rem;
-//     background-image: linear-gradient(to bottom right, $color-purple-shade, $color-purple-dark);
-//     border-radius: 3rem;
-//     box-shadow: 0 1rem 4rem rgba($color-black, .6);
-//     color: $color-white;
-//     text-align: center;
-//     overflow: hidden;
-// }
-
-// .gradient-bar {
-//     background: linear-gradient(90deg, $color-orange-1, $color-orange-2, $color-orange-3, $color-orange-4);
-//     height: 40rem;
-//     width: 100%;
-//     display: block;
-//     transform: skewY(-7deg);
-//     position: absolute;
-//     top: 25%;
-//     background-size: 400% 400%;
-//     animation: animated-span 35s infinite ease-in-out;
-// }
-//
-// @keyframes animated-span {
-//     0% {
-//         background-position: 0 50%;
-//     }
-//
-//     50% {
-//         background-position: 100% 50%;
-//     }
-//
-//     100% {
-//         background-position: 0 50%;
-//     }
-// }

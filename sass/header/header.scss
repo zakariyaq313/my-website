@@ -1,167 +1,98 @@
 header {
     position: relative;
-}
-
-.header-svg {
-    margin-top: 65vh;
-    // fill: url("#svg-gradient") red;
-    fill: $color-purple-dark;
-    z-index: 6;
-
-    @include respond(tab-port) {
-        margin-top: 70vh;
-    }
-}
-
-.header-container {
-    height: 65vh;
+    height: 100vh;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: $color-purple-dark;
-    // z-index: -10;
-
-    @include respond(tab-port) {
-        height: 70vh;
-    }
+    background-image: linear-gradient(to right, rgba($color-dark-purple, .5), rgba($color-light-purple, .5)), url("../images/background.svg");
+    background-size: cover;
+    overflow: hidden;
 }
 
 .heading-box {
     position: absolute;
-    top: 7rem;
-    left: 10rem;
-    z-index: 10;
-
-    @include respond(tab-port) {
-        left: 2rem;
-        top: 9rem;
+    left: 10%;
+    top: 20%;
+    @include respond(mobile){
+        left: 5%;
+        top: 25%;
     }
 }
 
 .heading {
-    display: inline-block;
-    color: $color-white;
-
     &-1 {
         font-size: 10rem;
         font-family: 'Sacramento', cursive;
+        font-weight: 600;
     }
 
     &-2 {
         font-size: 4rem;
-        font-family: 'Ubuntu', sans-serif;
         margin-top: -5rem;
-        @include respond(tab-port) {
-            margin-top: -2rem;
-        }
+        font-weight: 400;
     }
 }
 
-// #nav-toggle{
-//     display: none;
-// }
+.menu {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 2rem;
+    font-size: 5rem !important;
+    background-color: $color-white;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 2px 6px rgba($color-black, .6);
+    transition: all 0.3s;
 
-// .nav-button{
-//     position: absolute;
-//     width: 6rem;
-//     height: 6rem;
-//     background-color: $color-white;
-//     border-radius: 1rem;
-//     top: 4%;
-//     right: 4%;
-//     text-align: center;
-//     box-shadow: 0 .5rem 2rem rgba($color-black, .5);
-// }
-//
-// .nav-dropdown{
-//
-// }
-//
-// #nav-toggle:checked ~ .nav-dropdown{
-//     width: 10rem;
-//     height: 25rem;
-//     background-image: inherit;
-//     backdrop-filter: blur(1.5rem);
-// }
-
-// .nav-strips{
-//     position: relative;
-//     margin-top: 3rem;
-//
-//     &,
-//     &::before,
-//     &::after{
-//         width: 4rem;
-//         height: 2px;
-//         background-color: $color-black;
-//         display: inline-block;
-//     }
-
-//     &::before,
-//     &::after{
-//         content: "";
-//         position: absolute;
-//         left: 0;
-//     }
-//
-//     &::before{
-//         top: -1rem;
-//     }
-//
-//     &::after{
-//         top: 1rem;
-//     }
-// }
-
-.bongo-box {
-    position: relative;
-    left: 52%;
-    top: 18%;
-    width: 50rem;
-    height: 40rem;
-    overflow: hidden;
-    z-index: 1;
-
-    @include respond(tab-port) {
-        top: 40%;
+    &:active {
+        box-shadow: none;
     }
+
+    &-open {
+        opacity: 1;
+        visibility: hidden;
+
+        @include respond(mobile){
+            visibility: visible;
+        }
+    }
+
+    &-close {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.menu-background {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    transition: all .5s;
+    background-image: radial-gradient($color-dark-purple, $color-light-purple);
+    visibility: hidden;
 
     @include respond(mobile) {
-        margin: 0 auto;
-        left: 0;
-    }
-
-    .bongo-cat {
-        border: none;
-        width: 120%;
-        height: 135%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        @include respond(mobile) {
-            height: 145%;
-        }
+        visibility: visible;
     }
 }
 
 .navigation {
     position: absolute;
-    top: 6%;
-    right: 2%;
-    @include respond(tab-port) {
-        top: 4%;
+    top: 4%;
+    right: 3%;
+    @include respond(mobile) {
+        opacity: 0;
+        top: 6%;
+        right: -30%;
+        transition: all .3s;
     }
 }
 
 .nav {
     list-style: none;
-
-    @include respond(mobile) {
-        display: none;
-    }
 
     &-item {
         display: inline-block;
@@ -171,12 +102,16 @@ header {
         &:link,
         &:visited {
             font-size: 1.8rem;
-            padding: 1rem 3rem;
+            margin: 2rem 4rem;
             text-transform: uppercase;
+            transition: all 0.3s;
+            @include respond(mobile) {
+                margin: 2rem;
+            }
         }
 
         &:hover {
-            color: $color-purple-dark;
+            color: rgba($color-white, .4);
         }
 
         &:active {
