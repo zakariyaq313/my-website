@@ -14,13 +14,12 @@
     position: relative;
     padding: 5rem 0 3rem;
     margin: 0 8rem;
-    background-color: rgba(0,0,0,.1);
     backdrop-filter: blur(2rem);
     -webkit-backdrop-filter: blur(2rem);
-    box-shadow: 0 0 10px rgba($color-black, .4);
+    box-shadow: 0 0 10px rgba($color-black, .3);
     text-align: center;
     border-radius: 1.5rem;
-    transition: all 5s;
+    transition: all 2s;
 
     @include respond(mobile){
         margin: 0 2rem;
