@@ -14,9 +14,10 @@
     position: relative;
     padding: 5rem 0 3rem;
     margin: 0 8rem;
-    backdrop-filter: blur(1.5rem);
-    -webkit-backdrop-filter: blur(1.5rem);
-    box-shadow: 0 1rem 4rem rgba($color-black, .6);
+    background-color: rgba(0,0,0,.1);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    box-shadow: 0 0 10px rgba($color-black, .4);
     text-align: center;
     border-radius: 1.5rem;
     transition: all 5s;
@@ -26,7 +27,7 @@
     }
 }
 
-@supports not (backdrop-filter: blur(1.5rem)) {
+@supports not (backdrop-filter: blur(2rem)) {
 
     .section-skills{
         background-attachment: scroll;
@@ -45,7 +46,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        filter: blur(1rem);
+        filter: blur(2rem);
         z-index: 1;
     }
 
@@ -64,26 +65,36 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 6rem;
-    padding: 2rem 10rem;
+    padding: 9rem 5rem 6rem;
 
     @include respond(tab-port){
         padding: 7rem 0 4rem;
-        grid-column-gap: 0;
+        margin: 0 5rem;
+        grid-template-columns: 1fr;
+        grid-row-gap: 5rem;
+    }
+
+    @include respond(mobile){
+        margin: 0 1rem;
     }
 
     &-icons {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-        align-items: center;
+        place-items: center;
+        justify-content: end;
         align-content: center;
+        @include respond(mobile){
+            margin-top: 2rem;
+            grid-row-gap: 2rem;
+        }
     }
 
     &-icon {
         padding: 3rem;
         font-size: 7rem;
         @include respond(mobile){
-            padding: 2.5rem;
+            padding: 1rem;
         }
 
         &-html {
@@ -109,13 +120,17 @@
     }
 
     &-vector {
+        margin: 0 2rem;
         align-self: center;
+        background-color: $color-deep-purple;
+        border-radius: 1rem;
+        @include respond(tab-port){
+            grid-row-start: 1;
+        }
 
-        .animated {
-            transform: scale(1.2);
-            @include respond(mobile){
-                display: none;
-            }
+        img{
+            width: 60%;
+            margin: 2rem 0;
         }
     }
 }

@@ -137,7 +137,8 @@ header {
     visibility: hidden; }
     @media (max-width: 37.5em) {
       .menu-open {
-        visibility: visible; } }
+        visibility: visible;
+        opacity: 0; } }
   .menu-close {
     visibility: hidden;
     opacity: 0; }
@@ -154,7 +155,8 @@ header {
   visibility: hidden; }
   @media (max-width: 37.5em) {
     .menu-background {
-      visibility: visible; } }
+      visibility: visible;
+      opacity: 0; } }
 
 .navigation {
   position: absolute;
@@ -240,11 +242,10 @@ header {
   transform: translateY(-50%) scale(1);
   font-size: 5rem;
   color: #FFFFFF;
-  transition: all .3s; }
-  .scroller:hover {
-    transform: translateY(-50%) scale(1.2); }
+  transition: all .3s;
+  cursor: pointer; }
   .scroller:active {
-    transform: translateY(-50%) scale(1); }
+    transform: translateY(-50%) scale(0.8); }
 
 .l_scroll {
   left: 3%; }
@@ -258,7 +259,7 @@ header {
   justify-items: center;
   margin: 5rem 0 0;
   padding: 0 20% 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   width: 60%; }
   @media (max-width: 37.5em) {
     .project {
@@ -328,13 +329,6 @@ header {
       .project-snap {
         height: 60rem; } }
 
-.project-todo {
-  opacity: 1; }
-
-.project-natours {
-  display: none;
-  opacity: 0; }
-
 .section-skills {
   width: 100%;
   padding: 10rem 0;
@@ -350,9 +344,10 @@ header {
   position: relative;
   padding: 5rem 0 3rem;
   margin: 0 8rem;
-  backdrop-filter: blur(1.5rem);
-  -webkit-backdrop-filter: blur(1.5rem);
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   text-align: center;
   border-radius: 1.5rem;
   transition: all 5s; }
@@ -360,7 +355,7 @@ header {
     .skills-container {
       margin: 0 2rem; } }
 
-@supports not (backdrop-filter: blur(1.5rem)) {
+@supports not (backdrop-filter: blur(2rem)) {
   .section-skills {
     background-attachment: scroll; }
   .skills-container {
@@ -374,7 +369,7 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    filter: blur(1rem);
+    filter: blur(2rem);
     z-index: 1; }
   .skill {
     position: relative;
@@ -387,23 +382,32 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 6rem;
-  padding: 2rem 10rem; }
+  padding: 9rem 5rem 6rem; }
   @media (max-width: 56.25em) {
     .skill {
       padding: 7rem 0 4rem;
-      grid-column-gap: 0; } }
+      margin: 0 5rem;
+      grid-template-columns: 1fr;
+      grid-row-gap: 5rem; } }
+  @media (max-width: 37.5em) {
+    .skill {
+      margin: 0 1rem; } }
   .skill-icons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
+    place-items: center;
+    justify-content: end;
     align-content: center; }
+    @media (max-width: 37.5em) {
+      .skill-icons {
+        margin-top: 2rem;
+        grid-row-gap: 2rem; } }
   .skill-icon {
     padding: 3rem;
     font-size: 7rem; }
     @media (max-width: 37.5em) {
       .skill-icon {
-        padding: 2.5rem; } }
+        padding: 1rem; } }
     .skill-icon-html {
       font-size: 8rem; }
     .skill-icon-css {
@@ -415,12 +419,16 @@ header {
     .skill-icon-nodejs {
       height: 10rem; }
   .skill-vector {
-    align-self: center; }
-    .skill-vector .animated {
-      transform: scale(1.2); }
-      @media (max-width: 37.5em) {
-        .skill-vector .animated {
-          display: none; } }
+    margin: 0 2rem;
+    align-self: center;
+    background-color: #240555;
+    border-radius: 1rem; }
+    @media (max-width: 56.25em) {
+      .skill-vector {
+        grid-row-start: 1; } }
+    .skill-vector img {
+      width: 60%;
+      margin: 2rem 0; }
 
 footer {
   position: relative;

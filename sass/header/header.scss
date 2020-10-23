@@ -54,6 +54,7 @@ header {
 
         @include respond(mobile){
             visibility: visible;
+            opacity: 0;
         }
     }
 
@@ -76,6 +77,7 @@ header {
 
     @include respond(mobile) {
         visibility: visible;
+        opacity: 0;
     }
 }
 
