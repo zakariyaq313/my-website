@@ -62,15 +62,13 @@
 
 .skill {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 6rem;
-    padding: 9rem 5rem 6rem;
+    justify-items: center;
+    align-items: center;
+    padding: 6rem;
+    margin-top: 4rem;
 
     @include respond(tab-port){
-        padding: 7rem 0 4rem;
-        margin: 0 5rem;
-        grid-template-columns: 1fr;
-        grid-row-gap: 5rem;
+        padding: 8rem 0 4rem;
     }
 
     @include respond(mobile){
@@ -79,57 +77,76 @@
 
     &-icons {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         place-items: center;
         justify-content: end;
         align-content: center;
+        grid-gap: 3rem;
+
         @include respond(mobile){
-            margin-top: 2rem;
-            grid-row-gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0;
+            grid-row-gap: 3rem;
         }
     }
 
     &-icon {
-        padding: 3rem;
-        font-size: 7rem;
-        @include respond(mobile){
-            padding: 1rem;
-        }
-
-        &-html {
-            font-size: 8rem;
-        }
-
-        &-css {
-            font-size: 8rem;
-        }
+        padding: 1rem;
 
         &-js {
-            font-size: 7.5rem;
+            font-size: 8rem;
+            color: #f7df1e;
+            @include respond(mobile){
+                font-size: 9rem;
+            }
         }
 
-        &-mongodb,
-        &-redux {
-            height: 12rem;
+        &-html{
+            width: 8rem;
+            @include respond(mobile){
+                width: 8.5rem;
+            }
+        }
+
+        &-css{
+            width: 10rem;
+            @include respond(mobile){
+                width: 11rem;
+            }
+        }
+
+        &-react{
+            width: 8rem;
+            @include respond(mobile){
+                width: 8.5rem;
+                grid-area: 2 / 2;
+            }
         }
 
         &-nodejs {
-            height: 10rem;
-        }
-    }
-
-    &-vector {
-        margin: 0 2rem;
-        align-self: center;
-        background-color: $color-deep-purple;
-        border-radius: 1rem;
-        @include respond(tab-port){
-            grid-row-start: 1;
+            width: 15rem;
+            @include respond(mobile){
+                width: 13rem;
+            }
         }
 
-        img{
-            width: 60%;
-            margin: 2rem 0;
+        &-webpack{
+            width: 11rem;
+            @include respond(mobile){
+                display: none;
+            }
+        }
+
+        &-sass{
+            width: 10rem;
+        }
+
+        &-bootstrap{
+            width: 12rem;
+        }
+
+        &-mongodb, &-redux{
+            width: 14rem;
         }
     }
 }

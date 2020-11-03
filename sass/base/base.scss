@@ -6,7 +6,6 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-
     @include respond(tab-port) {
         font-size: 50%;
     }
@@ -18,4 +17,13 @@ html {
 body {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-white;
+    }
 }

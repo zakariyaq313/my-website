@@ -16,6 +16,7 @@
     color: $color-white;
     transition: all .3s;
     cursor: pointer;
+    // box-shadow: 0 2px 6px rgba($color-black, .6);
 
     &:active{
         transform: translateY(-50%) scale(.8);
@@ -53,7 +54,7 @@
         margin-top: 10rem;
         text-align: left;
         @include respond(mobile){
-            margin-top: 8rem;
+            margin-top: 10rem;
         }
     }
 
@@ -87,7 +88,6 @@
             transition: all .3s;
             @include respond(mobile){
                 font-size: 2.5rem;
-
             }
         }
 
@@ -127,6 +127,7 @@
         transition: all 3s;
         @include respond(mobile){
             height: 60rem;
+            margin-top: 5rem;
         }
     }
 }

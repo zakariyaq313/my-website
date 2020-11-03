@@ -32,7 +32,7 @@ menuClose.addEventListener("click", () => {
     menuClose.setAttribute("style", "opacity: 0; visibility: hidden;");
     menuOpen.setAttribute("style", "visibility: visible; opacity: 1; transform: rotate(0);");
     navbar.setAttribute("style", "right: -30%; opacity: 0;");
-    menuBackground.setAttribute("style", "transform: scale(0); opacity = 1");
+    menuBackground.setAttribute("style", "transform: scale(0); opacity: 1;");
 });
 
 
