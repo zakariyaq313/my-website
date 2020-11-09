@@ -461,15 +461,6 @@ header {
 .skill-icon {
   padding: 1rem;
 }
-.skill-icon-js {
-  font-size: 8rem;
-  color: #f7df1e;
-}
-@media (max-width: 37.5em) {
-  .skill-icon-js {
-    font-size: 9rem;
-  }
-}
 .skill-icon-html {
   width: 8rem;
 }
@@ -486,14 +477,23 @@ header {
     width: 11rem;
   }
 }
-.skill-icon-react {
-  width: 8rem;
+.skill-icon-js {
+  font-size: 8rem;
+  color: #f7df1e;
 }
 @media (max-width: 37.5em) {
-  .skill-icon-react {
-    width: 8.5rem;
-    grid-area: 2/2;
+  .skill-icon-js {
+    font-size: 9rem;
   }
+}
+.skill-icon-sass {
+  width: 10rem;
+}
+.skill-icon-bootstrap {
+  width: 12rem;
+}
+.skill-icon-mongodb {
+  width: 14rem;
 }
 .skill-icon-nodejs {
   width: 15rem;
@@ -503,22 +503,24 @@ header {
     width: 13rem;
   }
 }
-.skill-icon-webpack {
-  width: 11rem;
+.skill-icon-react {
+  width: 8.5rem;
 }
 @media (max-width: 37.5em) {
-  .skill-icon-webpack {
-    display: none;
+  .skill-icon-react {
+    grid-area: 2/2;
   }
 }
-.skill-icon-sass {
-  width: 10rem;
+.skill-icon-redux {
+  width: 8rem;
 }
-.skill-icon-bootstrap {
-  width: 12rem;
+.skill-icon-git {
+  width: 9rem;
 }
-.skill-icon-mongodb, .skill-icon-redux {
-  width: 14rem;
+@media (max-width: 37.5em) {
+  .skill-icon-git {
+    display: none;
+  }
 }
 
 footer {
@@ -533,13 +535,15 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  width: 3rem;
-  margin: 0 1rem;
+  width: 3.5rem;
+  margin: 0 1.2rem;
   border-radius: 3px;
   transition: all 0.3s;
+  padding: 1rem 0;
 }
 @media (max-width: 37.5em) {
   .logo {
@@ -550,16 +554,24 @@ footer {
   transform: scale(1.3);
 }
 .logo-pluralsight {
-  width: 3.2rem;
+  width: 4rem;
 }
 @media (max-width: 37.5em) {
   .logo-pluralsight {
     width: 4rem;
   }
 }
+.logo-discord {
+  width: 4.5rem;
+}
+@media (max-width: 37.5em) {
+  .logo-discord {
+    width: 5rem;
+  }
+}
 
 .source-links {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: #FFFFFF;
   margin-top: 2rem;

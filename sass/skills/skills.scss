@@ -93,14 +93,6 @@
     &-icon {
         padding: 1rem;
 
-        &-js {
-            font-size: 8rem;
-            color: #f7df1e;
-            @include respond(mobile){
-                font-size: 9rem;
-            }
-        }
-
         &-html{
             width: 8rem;
             @include respond(mobile){
@@ -115,25 +107,11 @@
             }
         }
 
-        &-react{
-            width: 8rem;
+        &-js {
+            font-size: 8rem;
+            color: #f7df1e;
             @include respond(mobile){
-                width: 8.5rem;
-                grid-area: 2 / 2;
-            }
-        }
-
-        &-nodejs {
-            width: 15rem;
-            @include respond(mobile){
-                width: 13rem;
-            }
-        }
-
-        &-webpack{
-            width: 11rem;
-            @include respond(mobile){
-                display: none;
+                font-size: 9rem;
             }
         }
 
@@ -145,8 +123,33 @@
             width: 12rem;
         }
 
-        &-mongodb, &-redux{
+        &-mongodb{
             width: 14rem;
+        }
+
+        &-nodejs {
+            width: 15rem;
+            @include respond(mobile){
+                width: 13rem;
+            }
+        }
+
+        &-react{
+            width: 8.5rem;
+            @include respond(mobile){
+                grid-area: 2 / 2;
+            }
+        }
+
+        &-redux{
+            width: 8rem;
+        }
+
+        &-git{
+            width: 9rem;
+            @include respond(mobile){
+                display: none;
+            }
         }
     }
 }
