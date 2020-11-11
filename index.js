@@ -44,9 +44,9 @@ document.addEventListener("scroll", () => {
     let skillSectionPosition = skillSection.getBoundingClientRect();
 
     if (skillSectionPosition.top > innerHeight || skillSectionPosition.bottom < 0) {
-        skillSection.style.opacity = "0";
+        skillSection.setAttribute("style", "opacity: 0; transform: translateY(50rem);")
     } else {
-        skillSection.style.opacity = "1";
+        skillSection.setAttribute("style", "opacity: 1; transform: translateY(0);")
     }
 });
 
