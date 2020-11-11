@@ -366,7 +366,7 @@ header {
 .section-skills {
   width: 100%;
   padding: 10rem 0;
-  background-image: url("../images/pc-background.jpg");
+  background-image: url("../images/101358236_2991620114263866_3303866982146768896_o.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -525,7 +525,7 @@ header {
 
 footer {
   position: relative;
-  background-image: linear-gradient(to right, #f587b3, #784dff);
+  background-color: #784dff;
   background-size: cover;
   padding: 3rem;
   text-align: center;
@@ -539,9 +539,8 @@ footer {
 }
 
 .logo {
-  width: 3.5rem;
-  margin: 0 1.2rem;
-  border-radius: 3px;
+  width: 3.2rem;
+  margin: 0 0.6rem;
   transition: all 0.3s;
   padding: 1rem 0;
 }
@@ -554,7 +553,7 @@ footer {
   transform: scale(1.3);
 }
 .logo-pluralsight {
-  width: 4rem;
+  width: 3.6rem;
 }
 @media (max-width: 37.5em) {
   .logo-pluralsight {
@@ -562,7 +561,7 @@ footer {
   }
 }
 .logo-discord {
-  width: 4.5rem;
+  width: 4rem;
 }
 @media (max-width: 37.5em) {
   .logo-discord {
