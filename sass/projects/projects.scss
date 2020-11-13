@@ -16,7 +16,10 @@
     color: $color-white;
     transition: all .3s;
     cursor: pointer;
-    // box-shadow: 0 2px 6px rgba($color-black, .6);
+
+    @include respond(mobile){
+        font-size: 4rem;
+    }
 
     &:active{
         transform: translateY(-50%) scale(.8);
@@ -25,10 +28,16 @@
 
 .l_scroll{
     left: 3%;
+    @include respond(mobile){
+        left: 2%;
+    }
 }
 
 .r_scroll{
     right: 3%;
+    @include respond(mobile){
+        right: 2%;
+    }
 }
 
 .project{
@@ -42,11 +51,9 @@
 
     @include respond(mobile){
         grid-template-columns: none;
-        grid-template-rows: .1fr .9fr;
+        width: 76%;
         margin: 0;
-        padding: 0 10% 0;
-        width: 80%;
-        grid-row-gap: 5rem;
+        padding: 0 12% 0;
     }
 
     &-description{
@@ -54,25 +61,19 @@
         margin-top: 10rem;
         text-align: left;
         @include respond(mobile){
-            margin-top: 10rem;
+            display: none;
         }
     }
 
     &-title{
         font-size: 5rem;
         font-weight: 300;
-        @include respond(mobile){
-            font-size: 4rem;
-        }
     }
 
     &-about{
         font-size: 2rem;
         font-weight: 300;
         margin-top: 2rem;
-        @include respond(mobile){
-            font-size: 2.2rem;
-        }
     }
 
     &-button{
@@ -86,9 +87,6 @@
             border-radius: 10rem;
             color: $color-dark-purple;
             transition: all .3s;
-            @include respond(mobile){
-                font-size: 2.5rem;
-            }
         }
 
         &:hover{
@@ -105,29 +103,24 @@
         font-size: 1.6rem;
         margin-top: 2rem;
 
-        @include respond(mobile){
-            font-size: 2.2rem;
-        }
-
         &-icon{
             margin: 0 2px;
             font-size: 2rem;
-            @include respond(mobile){
-                font-size: 2.5rem;
-            }
         }
     }
 
-    &-snap{
+    &-preview{
         height: 50rem;
         border-top-right-radius: 2rem;
         border-top-left-radius: 2rem;
-        box-shadow: 0 1rem 4rem rgba($color-black, .6);
         margin-bottom: -3px;
+        box-shadow: 0 1rem 4rem rgba($color-black, .6);
         transition: all 3s;
+
         @include respond(mobile){
-            height: 60rem;
-            margin-top: 5rem;
+            height: auto;
+            width: 100%;
+            margin-top: 8rem;
         }
     }
 }

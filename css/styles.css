@@ -303,6 +303,11 @@ header {
   transition: all 0.3s;
   cursor: pointer;
 }
+@media (max-width: 37.5em) {
+  .scroller {
+    font-size: 4rem;
+  }
+}
 .scroller:active {
   transform: translateY(-50%) scale(0.8);
 }
@@ -310,9 +315,19 @@ header {
 .l_scroll {
   left: 3%;
 }
+@media (max-width: 37.5em) {
+  .l_scroll {
+    left: 2%;
+  }
+}
 
 .r_scroll {
   right: 3%;
+}
+@media (max-width: 37.5em) {
+  .r_scroll {
+    right: 2%;
+  }
 }
 
 .project {
@@ -327,11 +342,9 @@ header {
 @media (max-width: 37.5em) {
   .project {
     grid-template-columns: none;
-    grid-template-rows: 0.1fr 0.9fr;
+    width: 76%;
     margin: 0;
-    padding: 0 10% 0;
-    width: 80%;
-    grid-row-gap: 5rem;
+    padding: 0 12% 0;
   }
 }
 .project-description {
@@ -341,27 +354,17 @@ header {
 }
 @media (max-width: 37.5em) {
   .project-description {
-    margin-top: 10rem;
+    display: none;
   }
 }
 .project-title {
   font-size: 5rem;
   font-weight: 300;
 }
-@media (max-width: 37.5em) {
-  .project-title {
-    font-size: 4rem;
-  }
-}
 .project-about {
   font-size: 2rem;
   font-weight: 300;
   margin-top: 2rem;
-}
-@media (max-width: 37.5em) {
-  .project-about {
-    font-size: 2.2rem;
-  }
 }
 .project-button:link, .project-button:visited {
   font-size: 2rem;
@@ -372,11 +375,6 @@ header {
   border-radius: 10rem;
   color: #784dff;
   transition: all 0.3s;
-}
-@media (max-width: 37.5em) {
-  .project-button:link, .project-button:visited {
-    font-size: 2.5rem;
-  }
 }
 .project-button:hover {
   transform: scale(1.1);
@@ -389,32 +387,23 @@ header {
   font-size: 1.6rem;
   margin-top: 2rem;
 }
-@media (max-width: 37.5em) {
-  .project .tech_stack {
-    font-size: 2.2rem;
-  }
-}
 .project .tech_stack-icon {
   margin: 0 2px;
   font-size: 2rem;
 }
-@media (max-width: 37.5em) {
-  .project .tech_stack-icon {
-    font-size: 2.5rem;
-  }
-}
-.project-snap {
+.project-preview {
   height: 50rem;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.6);
   margin-bottom: -3px;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.6);
   transition: all 3s;
 }
 @media (max-width: 37.5em) {
-  .project-snap {
-    height: 60rem;
-    margin-top: 5rem;
+  .project-preview {
+    height: auto;
+    width: 100%;
+    margin-top: 8rem;
   }
 }
 
