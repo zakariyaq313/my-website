@@ -126,7 +126,13 @@ header {
 @media (max-width: 37.5em) {
   .heading-box {
     left: 5%;
-    top: 25%;
+    top: 26%;
+  }
+  .heading-box h1 {
+    margin-top: 2rem;
+  }
+  .heading-box h2:last-of-type {
+    margin-top: -2rem;
   }
 }
 
