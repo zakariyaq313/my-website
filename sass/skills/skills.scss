@@ -1,22 +1,21 @@
 .section-skills {
     width: 100%;
-    padding: 10rem 0;
-    background-image: url("../images/pc-background.jpg");
+    padding: 8rem 0;
+    background-image: url("../images/pc-background2.jpg");
     background-size: cover;
     background-attachment: fixed;
     @include respond(mobile){
-        background-image: url("../images/mobile-background-2.gif");
-        padding: 8rem 0;
+        background-image: url("../images/mobile-background.gif");
+        background-position: center;
     }
 }
 
 .skills-container {
-    position: relative;
     padding: 5rem 0 3rem;
-    margin: 0 8rem;
-    backdrop-filter: blur(3rem);
-    -webkit-backdrop-filter: blur(3rem);
-    box-shadow: 0 0 10px rgba($color-black, .3);
+    margin: 0 10rem;
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    box-shadow: 0 1rem 4rem rgba($color-black, .5);
     text-align: center;
     border-radius: 1.5rem;
     transition: all 2s;
@@ -64,7 +63,7 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    padding: 6rem;
+    padding: 4rem 0;
     margin-top: 4rem;
 
     @include respond(tab-port){
@@ -81,7 +80,7 @@
         place-items: center;
         justify-content: end;
         align-content: center;
-        grid-gap: 3rem;
+        grid-gap: 2rem;
 
         @include respond(mobile){
             grid-template-columns: repeat(3, 1fr);
@@ -117,14 +116,23 @@
 
         &-sass{
             width: 10rem;
+            @include respond(mobile){
+                width: 9rem;
+            }
         }
 
         &-bootstrap{
             width: 12rem;
+            @include respond(mobile){
+                width: 11rem;
+            }
         }
 
         &-mongodb{
             width: 14rem;
+            @include respond(mobile){
+                width: 13rem;
+            }
         }
 
         &-nodejs {
@@ -143,6 +151,9 @@
 
         &-redux{
             width: 8rem;
+            @include respond(mobile){
+                width: 7rem;
+            }
         }
 
         &-git{
