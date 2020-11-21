@@ -309,11 +309,6 @@ header {
   transition: all 0.3s;
   cursor: pointer;
 }
-@media (max-width: 37.5em) {
-  .scroller {
-    font-size: 5rem;
-  }
-}
 .scroller:active {
   transform: translateY(-50%) scale(0.8);
 }
