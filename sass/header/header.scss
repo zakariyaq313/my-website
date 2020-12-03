@@ -40,65 +40,13 @@ header {
     }
 }
 
-.menu {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    padding: 2rem;
-    font-size: 5rem !important;
-    background-color: $color-white;
-    border-radius: 100%;
-    cursor: pointer;
-    z-index: 5;
-    box-shadow: 0 2px 6px rgba($color-black, .6);
-    transition: all 0.3s;
-
-    &:active {
-        box-shadow: none;
-    }
-
-    &-open {
-        opacity: 1;
-        visibility: hidden;
-
-        @include respond(mobile){
-            visibility: visible;
-            opacity: 0;
-        }
-    }
-
-    &-close {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-.menu-background {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
-    position: absolute;
-    top: 7%;
-    right: 7%;
-    transition: all .5s;
-    background-image: radial-gradient($color-dark-purple, $color-light-purple);
-    visibility: hidden;
-
-    @include respond(mobile) {
-        visibility: visible;
-        opacity: 0;
-    }
-}
-
 .navigation {
     position: absolute;
     top: 4%;
     right: 3%;
+
     @include respond(mobile) {
-        opacity: 0;
-        top: 6%;
-        right: -30%;
-        transition: all .3s;
+        display: none;
     }
 }
 
