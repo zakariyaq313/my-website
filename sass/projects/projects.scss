@@ -16,9 +16,15 @@
     color: $color-white;
     transition: all .3s;
     cursor: pointer;
+    z-index: 10000;
+    outline: none;
+
+    &:hover{
+        transform: translateY(-50%) scale(1.2);
+    }
 
     &:active{
-        transform: translateY(-50%) scale(.8);
+        transform: translateY(-50%) scale(1);
     }
 }
 

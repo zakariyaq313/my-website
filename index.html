@@ -8,10 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="icon" href="images/icon.svg">
 	<link href="https://fonts.googleapis.com/css?family=Amita|Sacramento|Ubuntu&display=swap" rel="stylesheet">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<script src="https://kit.fontawesome.com/fd56597089.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,79 +54,92 @@
 				<h2 class="heading-primary">Projects</h2>
 				<p class="heading-secondary">I've made/contributed to</p>
 			</span>
-
+			
 			<i class="fas fa-caret-square-left scroller l_scroll"></i>
 			<i class="fas fa-caret-square-right scroller r_scroll"></i>
 
-			<div class="project">
-				<div class="project-description">
-					<h3 class="project-title">To-Do List</h3>
-					<p class="project-about">A simple to-do list web app made with vanilla JavaScript</p>
-					<span class="tech_stack">
-						<i class="fas fa-code"></i> with:
-						<i class="fab fa-html5 tech_stack-icon"></i>
-						<i class="fab fa-css3-alt tech_stack-icon"></i>
-						<i class="fab fa-js-square tech_stack-icon"></i>
-					</span>
-					<br>
-					<a href="https://zakariyaq313.github.io/to_do_list/" class="project-button" target="_blank"
-						rel="noreferrer noopener">Visit &nbsp;
-						<i class="fas fa-external-link-alt"></i>
-					</a>
-				</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
 
-				<div class="">
-					<a href="https://zakariyaq313.github.io/to_do_list/" target="_blank" rel="noreferrer noopener">
-						<img src="images/ToDo.jpg" alt="To Do List project" class="project-preview">
-					</a>
-				</div>
-			</div>
+					<div class="swiper-slide">
+						<div class="project">
+							<div class="project-description">
+								<h3 class="project-title">To-Do List</h3>
+								<p class="project-about">A simple to-do list web app made with vanilla JavaScript</p>
+								<span class="tech_stack">
+									<i class="fas fa-code"></i> with:
+									<i class="fab fa-html5 tech_stack-icon"></i>
+									<i class="fab fa-css3-alt tech_stack-icon"></i>
+									<i class="fab fa-js-square tech_stack-icon"></i>
+								</span>
+								<br>
+								<a href="https://zakariyaq313.github.io/to_do_list/" class="project-button" target="_blank"
+									rel="noreferrer noopener">Visit &nbsp;
+									<i class="fas fa-external-link-alt"></i>
+								</a>
+							</div>
+			
+							<div class="">
+								<a href="https://zakariyaq313.github.io/to_do_list/" target="_blank" rel="noreferrer noopener">
+									<img src="images/ToDo.jpg" alt="To Do List project" class="project-preview">
+								</a>
+							</div>
+						</div>
+					</div>
 
-			<div class="project">
-				<div class="project-description">
-					<h3 class="project-title">Natours</h3>
-					<p class="project-about">Natours is a tour company's website</p>
-					<span class="tech_stack">
-						<i class="fas fa-code"></i> with:
-						<i class="fab fa-html5 tech_stack-icon"></i>
-						<i class="fab fa-css3-alt tech_stack-icon"></i>
-						<i class="fab fa-sass tech_stack-icon"></i>
-					</span> <br>
-					<a href="https://zakariyaq313.github.io/natours/" class="project-button" target="_blank"
-						rel="noreferrer noopener">Visit &nbsp;
-						<i class="fas fa-external-link-alt"></i>
-					</a>
-				</div>
+					<div class="swiper-slide">
+						<div class="project">
+							<div class="project-description">
+								<h3 class="project-title">Natours</h3>
+								<p class="project-about">Natours is a tour company's website</p>
+								<span class="tech_stack">
+									<i class="fas fa-code"></i> with:
+									<i class="fab fa-html5 tech_stack-icon"></i>
+									<i class="fab fa-css3-alt tech_stack-icon"></i>
+									<i class="fab fa-sass tech_stack-icon"></i>
+								</span> <br>
+								<a href="https://zakariyaq313.github.io/natours/" class="project-button" target="_blank"
+									rel="noreferrer noopener">Visit &nbsp;
+									<i class="fas fa-external-link-alt"></i>
+								</a>
+							</div>
+			
+							<div class="">
+								<a href="https://zakariyaq313.github.io/natours/" target="_blank" rel="noreferrer noopener">
+									<img src="images/Natours.jpg" alt="Natours project" class="project-preview">
+								</a>
+							</div>
+						</div>
+					</div>
 
-				<div class="">
-					<a href="https://zakariyaq313.github.io/natours/" target="_blank" rel="noreferrer noopener">
-						<img src="images/Natours.jpg" alt="Natours project" class="project-preview">
-					</a>
-				</div>
-			</div>
+					<div class="swiper-slide">
+						<div class="project">
+							<div class="project-description">
+								<h3 class="project-title">Portfolio site</h3>
+								<p class="project-about">Personal/portfolio website</p>
+								<span class="tech_stack">
+									<i class="fas fa-code"></i> with:
+									<i class="fab fa-html5 tech_stack-icon"></i>
+									<i class="fab fa-css3-alt tech_stack-icon"></i>
+									<i class="fab fa-sass tech_stack-icon"></i>
+								</span> <br>
+								<a href="https://zakariyaq313.github.io/portfolio-site-example/" class="project-button"
+									target="_blank" rel="noreferrer noopener">Visit &nbsp;
+									<i class="fas fa-external-link-alt"></i>
+								</a>
+							</div>
+			
+							<div class="">
+								<a href="https://zakariyaq313.github.io/portfolio-site-example/" target="_blank"
+									rel="noreferrer noopener">
+									<img src="images/P2.jpg" alt="Portfolio site" class="project-preview">
+								</a>
+							</div>
+						</div>	
+					</div>
 
-			<div class="project">
-				<div class="project-description">
-					<h3 class="project-title">Portfolio site</h3>
-					<p class="project-about">Personal/portfolio website</p>
-					<span class="tech_stack">
-						<i class="fas fa-code"></i> with:
-						<i class="fab fa-html5 tech_stack-icon"></i>
-						<i class="fab fa-css3-alt tech_stack-icon"></i>
-						<i class="fab fa-sass tech_stack-icon"></i>
-					</span> <br>
-					<a href="https://zakariyaq313.github.io/portfolio-site-example/" class="project-button"
-						target="_blank" rel="noreferrer noopener">Visit &nbsp;
-						<i class="fas fa-external-link-alt"></i>
-					</a>
 				</div>
-
-				<div class="">
-					<a href="https://zakariyaq313.github.io/portfolio-site-example/" target="_blank"
-						rel="noreferrer noopener">
-						<img src="images/P2.jpg" alt="Portfolio site" class="project-preview">
-					</a>
-				</div>
+				
 			</div>
 
 		</section>
@@ -209,6 +222,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="./index.js"></script>
 </body>
 

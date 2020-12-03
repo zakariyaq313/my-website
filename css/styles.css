@@ -256,9 +256,14 @@ header {
   color: #FFFFFF;
   transition: all 0.3s;
   cursor: pointer;
+  z-index: 10000;
+  outline: none;
+}
+.scroller:hover {
+  transform: translateY(-50%) scale(1.2);
 }
 .scroller:active {
-  transform: translateY(-50%) scale(0.8);
+  transform: translateY(-50%) scale(1);
 }
 
 .l_scroll {
