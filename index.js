@@ -13,9 +13,6 @@ let mySwiper = new Swiper('.swiper-container', {
     loop: true,
     speed: 1000,
     slideShadows: false,
-    autoplay: { 
-        delay: 4000, 
-    },
     navigation: {
       nextEl: '.r_scroll',
       prevEl: '.l_scroll',
