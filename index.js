@@ -1,9 +1,12 @@
 // Skill section animation on scroll
 gsap.registerPlugin(ScrollTrigger);
+
 gsap.to("div.skills-container", {
-    scrollTrigger: "section.section-skills",
+    scrollTrigger: "div.skills-container",
+    trigger: "section.section-skills",
     y: 0,
-    opacity: 1
+    opacity: 1,
+    start: 20
 });
 
 

@@ -1,7 +1,7 @@
 .section-skills {
     width: 100%;
     padding: 8rem 0;
-    background-image: url("../images/pc-background2.jpg");
+    background-image: url("../images/pc-background.jpg");
     background-size: cover;
     background-attachment: fixed;
     @include respond(mobile){
@@ -13,11 +13,11 @@
 .skills-container {
     padding: 5rem 0 3rem;
     margin: 0 10rem;
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.5rem);
     box-shadow: 0 1rem 4rem rgba($color-black, .5);
     text-align: center;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     transition: all 2s;
     transform: translateY(50rem);
     opacity: 0;
@@ -27,7 +27,7 @@
     }
 }
 
-@supports not (backdrop-filter: blur(2rem)) {
+@supports not (backdrop-filter: blur(1.5rem)) {
 
     .section-skills{
         background-attachment: scroll;
@@ -46,7 +46,7 @@
         position: absolute;
         left: -5rem;
         top: -5rem;
-        filter: blur(2rem);
+        filter: blur(1.5rem);
         z-index: 1;
     }
 

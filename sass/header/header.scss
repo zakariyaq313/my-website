@@ -5,6 +5,9 @@ header {
     background-image: linear-gradient(to right, rgba($color-dark-purple, .5), rgba($color-light-purple, .5)), url("../images/background.svg");
     background-size: cover;
     overflow: hidden;
+    @include respond(mobile){
+        height: 85vh;
+    }
 }
 
 .heading-box {
