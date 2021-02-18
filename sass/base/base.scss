@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -9,6 +10,7 @@ html {
     @include respond(tab-port) {
         font-size: 50%;
     }
+
     @include respond(mobile) {
         font-size: 40%;
     }
@@ -17,6 +19,9 @@ html {
 body {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
