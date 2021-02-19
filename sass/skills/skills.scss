@@ -1,13 +1,7 @@
 .section-skills {
-    width: 100%;
-    padding: 8rem 0;
     background-image: url("../images/pc-background.jpg");
     background-size: cover;
     background-attachment: fixed;
-    @include respond(mobile){
-        background-image: url("../images/mobile-background.gif");
-        background-position: center;
-    }
 }
 
 .skills-container {
@@ -19,10 +13,6 @@
     text-align: center;
     border-radius: 1rem;
     transition: all 2s;
-
-    @include respond(mobile){
-        margin: 0 2rem;
-    }
 }
 
 @supports not (backdrop-filter: blur(1.5rem)) {
@@ -66,14 +56,6 @@
     padding: 4rem 0;
     margin-top: 4rem;
 
-    @include respond(tab-port){
-        padding: 8rem 0 4rem;
-    }
-
-    @include respond(mobile){
-        margin: 0 1rem;
-    }
-
     &-icons {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -81,12 +63,6 @@
         justify-content: end;
         align-content: center;
         grid-gap: 2rem;
-
-        @include respond(mobile){
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 0;
-            grid-row-gap: 3rem;
-        }
     }
 
     &-icon {

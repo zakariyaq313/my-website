@@ -1,128 +1,21 @@
 .section-projects{
     width: 100%;
-    background-image: linear-gradient(to right, $color-dark-purple, $color-light-purple);
+    background-color: $background-light;
     overflow: hidden;
-    margin: 0;
-    padding-top: 5rem;
     text-align: center;
     position: relative;
 }
 
-.scroller{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) scale(1);
-    font-size: 5rem;
-    color: $color-white;
-    transition: all .3s;
-    cursor: pointer;
-    z-index: 10000;
-    outline: none;
-
-    &:hover{
-        transform: translateY(-50%) scale(1.2);
-    }
-
-    &:active{
-        transform: translateY(-50%) scale(1);
-    }
-}
-
-.l_scroll{
-    left: 3%;
-    @include respond(mobile){
-        left: 2%;
-    }
-}
-
-.r_scroll{
-    right: 3%;
-    @include respond(mobile){
-        right: 2%;
-    }
-}
-
-.project{
+.projects-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 5rem;
     justify-items: center;
-    margin: 5rem 0 0;
-    padding: 0 20% 0;
-    transition: all 1s ease-in-out;
-    width: 60%;
+}
 
-    @include respond(mobile){
-        grid-template-columns: none;
-        width: 76%;
-        margin: 0;
-        padding: 0 12% 0;
-    }
-
-    &-description{
-        color: $color-white;
-        margin-top: 10rem;
-        text-align: left;
-        @include respond(mobile){
-            display: none;
-        }
-    }
-
-    &-title{
-        font-size: 5rem;
-        font-weight: 300;
-    }
-
-    &-about{
-        font-size: 2rem;
-        font-weight: 300;
-        margin-top: 2rem;
-    }
-
-    &-button{
-        &:link,
-        &:visited{
-            font-size: 2rem;
-            font-weight: 500;
-            padding: 1rem 2rem;
-            margin-top: 2rem;
-            background-color: $color-white;
-            border-radius: 10rem;
-            color: $color-dark-purple;
-            transition: all .3s;
-        }
-
-        &:hover{
-            transform: scale(1.1);
-        }
-
-        &:active{
-            transform: scale(1);
-        }
-    }
-
-    .tech_stack{
-        display: inline-block;
-        font-size: 1.6rem;
-        margin-top: 2rem;
-
-        &-icon{
-            margin: 0 2px;
-            font-size: 2rem;
-        }
-    }
-
-    &-preview{
-        height: 50rem;
-        border-top-right-radius: 2rem;
-        border-top-left-radius: 2rem;
-        margin-bottom: -3px;
-        box-shadow: 0 1rem 4rem rgba($color-black, .6);
-        transition: all 3s;
-
-        @include respond(mobile){
-            height: auto;
-            width: 100%;
-            margin-top: 8rem;
-        }
-    }
+.project-preview{
+    width: 60rem;
+    border-radius: 1rem;
+    transition: all 3s;
+    box-shadow: 0 2px 1.2rem rgba($color: #000000, $alpha: 0.5);
 }
