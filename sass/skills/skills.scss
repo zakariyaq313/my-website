@@ -1,142 +1,16 @@
 .section-skills {
-    background-image: url("../images/pc-background.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.skills-container {
-    padding: 5rem 0 3rem;
-    margin: 0 10rem;
-    backdrop-filter: blur(1.5rem);
-    -webkit-backdrop-filter: blur(1.5rem);
-    box-shadow: 0 1rem 4rem rgba($color-black, .5);
+    padding: 8rem 10rem;
     text-align: center;
-    border-radius: 1rem;
-    transition: all 2s;
 }
 
-@supports not (backdrop-filter: blur(1.5rem)) {
-
-    .section-skills{
-        background-attachment: scroll;
-    }
-
-    .skills-container{
-        background: inherit;
-        overflow: hidden;
-    }
-
-    .skills-container::after {
-        content: '';
-        width: 115%;
-        height: 115%;
-        background: inherit;
-        position: absolute;
-        left: -5rem;
-        top: -5rem;
-        filter: blur(1.5rem);
-        z-index: 1;
-    }
-
-    .skill{
-        position: relative;
-        z-index: 10;
-    }
-
-    .skills-container span{
-        position: relative;
-        z-index: 10;
-    }
-}
-
-.skill {
+.technologies{
     display: grid;
-    justify-items: center;
-    align-items: center;
-    padding: 4rem 0;
-    margin-top: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    row-gap: 10rem;
+    margin-top: 10rem;
+}
 
-    &-icons {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        place-items: center;
-        justify-content: end;
-        align-content: center;
-        grid-gap: 2rem;
-    }
-
-    &-icon {
-        padding: 1rem;
-
-        &-html{
-            width: 8rem;
-            @include respond(mobile){
-                width: 8.5rem;
-            }
-        }
-
-        &-css{
-            width: 10rem;
-            @include respond(mobile){
-                width: 11rem;
-            }
-        }
-
-        &-js {
-            font-size: 8rem;
-            color: #f7df1e;
-            @include respond(mobile){
-                font-size: 9rem;
-            }
-        }
-
-        &-sass{
-            width: 10rem;
-            @include respond(mobile){
-                width: 9rem;
-            }
-        }
-
-        &-bootstrap{
-            width: 12rem;
-            @include respond(mobile){
-                width: 11rem;
-            }
-        }
-
-        &-mongodb{
-            width: 14rem;
-            @include respond(mobile){
-                width: 13rem;
-            }
-        }
-
-        &-nodejs {
-            width: 15rem;
-            @include respond(mobile){
-                width: 13rem;
-            }
-        }
-
-        &-react{
-            width: 8.5rem;
-            @include respond(mobile){
-                grid-area: 2 / 2;
-            }
-        }
-
-        &-redux{
-            width: 8rem;
-            @include respond(mobile){
-                width: 7rem;
-            }
-        }
-
-        &-git{
-            width: 9rem;
-            @include respond(mobile){
-                display: none;
-            }
-        }
-    }
+.skill-icon{
+    height: 8rem;
 }
