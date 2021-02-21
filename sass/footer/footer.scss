@@ -1,7 +1,6 @@
 footer {
     position: relative;
     text-align: center;
-    background-color: $background-light;
     padding: 5rem;
 }
 
@@ -26,10 +25,16 @@ footer {
 
     &-1{
         height: 3.5rem;
+        @include respond(600px){
+            height: 4rem;
+        }
     }
 
     &-2{
         height: 3rem;
+        @include respond(600px){
+            height: 3.5rem;
+        }
     }
 }
 
@@ -51,7 +56,6 @@ footer {
 
 .copyright {
     margin-top: 2rem;
-    font-size: 1.2rem;
 
     p:last-of-type{
         margin-top: 1rem;

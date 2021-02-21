@@ -1,35 +1,115 @@
 header {
     position: relative;
-    padding: 5rem;
+    padding: 5rem 5rem 15rem;
     text-align: center;
+    overflow-x: hidden;
+
+    @include respond(900px){
+        padding: 5rem 5rem 20rem;
+    }
+
+    @include respond(500px){
+        padding: 5rem 0 20rem;
+    }
 }
 
-nav{
+nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar{
+    transition: all .4s;
+
+    @include respond(1200px){
+        transform: translateX(200%);
+        opacity: 0;
+    }
+}
+
+.menu-button {
+    position: relative;
+    height: 6rem;
+    width: 6rem;
+    margin-left: 4rem;
+    border-radius: 100%;
+    transition: all .3s;
+    display: none;
+
+    @include respond(1200px){
+        display: inline-block;
+    }
+
+    @include respond(500px){
+        margin: 0 5rem 0 3rem;
+    }
+
+    @include respond(400px){
+        margin: 0 3rem 0 1rem;
+    }
+
+    @include respond(400px){
+        margin-right: 2rem;
+    }
+
+    &::before {
+        top: 40%;
+    }
+
+    &::after {
+        top: 60%;
+    }
+}
+
+.menu-button::before,
+.menu-button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 4rem;
+    background-color: #fff;
+}
+
+.menu-open{
+    background-color: #fff;
+
+    &::before, &::after{
+        width: 3rem;
+        background-color: #000;
+        top: 50%;
+    }
+
+    &::before{
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after{
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.navbar-open{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .hero-heading {
     margin-top: 12rem;
+
+    @include respond(500px){
+        padding: 0 2rem;
+    }
 }
 
-.code{
+.code {
     fill: #fff;
     height: 7rem;
     vertical-align: middle;
-}
 
-.heading {
-    color: #fff;
-
-    &-1 {
-        font-size: 10rem;
-        font-family: 'Sacramento', cursive;
-        font-weight: 600;
-    }
-
-    &-2 {
-        font-size: 4rem;
-        font-weight: 400;
+    @include respond(400px){
+        height: 5rem;
     }
 }

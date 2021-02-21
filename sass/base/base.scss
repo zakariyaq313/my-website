@@ -7,12 +7,17 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    @include respond(tab-port) {
+
+    @include respond(1600px) {
+        font-size: 75%;
+    }
+
+    @include respond(600px) {
         font-size: 50%;
     }
 
-    @include respond(mobile) {
-        font-size: 40%;
+    @include respond(320px) {
+        font-size: 45%;
     }
 }
 
@@ -22,8 +27,6 @@ html {
 }
 
 body {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
     font-family: "Product-Sans";
     background-color: $background-dark;
     color: #fff;
@@ -41,6 +44,5 @@ a {
 }
 
 p{
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.8;
+    line-height: 1.6;
 }

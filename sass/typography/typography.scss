@@ -1,11 +1,88 @@
-.heading{
-    &-primary{
-        font-size: 5rem;
-        font-weight: 400;
+.nav-link{
+    font-size: 1.6rem;
+
+    @include respond(600px){
+        font-size: 1.8rem;
     }
 
-    &-secondary{
-        font-size: 1.8rem;
-        font-weight: 300;
+    @include respond(350px){
+        font-size: 1.6rem;
+    }    
+}
+
+.heading-primary {
+    font-size: 5rem;
+    font-weight: 400;
+
+    @include respond(400px){
+        font-size: 4rem;
+    }
+}
+
+.section-about-me h1,
+.section-projects h1{
+    @include respond(400px){
+        font-size: 4.5rem;
+    }
+}
+
+.paragraph {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-top: 2rem;
+    width: 45rem;
+
+    @include respond(600px){
+        font-size: 2.2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    @include respond(400px){
+        font-size: 2rem;
+    }
+}
+
+.copyright{
+    font-size: 1.2rem;
+
+    @include respond(600px){
+        font-size: 1.4rem;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(264.51deg,
+            #FFE580 4.38%, #FF7571 11.51%,
+            #FF7270 25.06%, #EA5DAD 36.04%,
+            #C2A0FD 47.63%, #9867F0 59.03%,
+            #3BF0E4 69.96%, #33CE43 83.74%,
+            #B2F4B6 95.62%);
+
+    background-position: 58% 50%;
+    background-size: 500%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-animation: gradient-shift 30s ease infinite;
+    animation: gradient-shift 30s ease infinite;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 58% 50%;
+    }
+
+    25% {
+        background-position: 100% 0%;
+    }
+
+    75% {
+        background-position: 10% 50%;
+    }
+
+    100% {
+        background-position: 58% 50%;
     }
 }

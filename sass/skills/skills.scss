@@ -1,6 +1,19 @@
 .section-skills {
-    padding: 8rem 10rem;
+    padding: 8rem 15rem;
     text-align: center;
+    background-color: $background-light;
+
+    @include respond(1100px){
+        padding: 5rem 10rem;
+    }
+
+    @include respond(800px){
+        padding: 5rem;
+    }
+
+    @include respond(500px){
+        padding: 5rem 0;
+    }
 }
 
 .technologies{
@@ -9,8 +22,21 @@
     place-items: center;
     row-gap: 10rem;
     margin-top: 10rem;
+
+    @include respond(900px){
+        margin-top: 6rem;
+        row-gap: 6rem;
+    }
 }
 
 .skill-icon{
     height: 8rem;
+
+    @include respond(900px){
+        height: 6rem;
+    }
+
+    @include respond(350px){
+        height: 5rem;
+    }
 }

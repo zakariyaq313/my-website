@@ -1,65 +1,79 @@
 // Navbar links
-.nav-link{
+.nav-link {
     background-image: linear-gradient(to right, #fff, #fff);
     background-repeat: repeat-y;
     background-size: 0;
     padding: 1.5rem 5rem;
     margin: 0 1rem;
-    font-size: 1.4rem;
     transition: all .5s;
 
-    &:hover{
+    &:hover {
         color: $background-dark;
         background-size: 100%;
+    }
+
+    @include respond(1200px){
+        padding: 0;
+        margin: 0 4rem;
+
+        &:hover{
+            color: #fff;
+            background-size: 0;
+        }
+    }
+
+    @include respond(800px){
+        margin: 0 3rem;
+    }
+
+    @include respond(500px){
+        margin: 0 2rem;
     }
 }
 
 // Explore button
-.explore-button {
-    &:link,
-    &:visited {
-        font-size: 2rem;
-        display: inline-block;
-        margin-top: 5rem;
-        padding: 1.5rem 7rem;
-        border-radius: 0.5rem;
-        background: linear-gradient(240deg,
-                #FFE580 4.38%, #FF7571 11.51%,
-                #FF7270 25.06%, #EA5DAD 36.04%,
-                #C2A0FD 47.63%, #9867F0 59.03%,
-                #3BF0E4 69.96%, #33CE43 83.74%,
-                #B2F4B6 95.62%);
-        background-position: 58% 50%;
-        background-size: 500%;
-        transition: all .2s linear;
-        animation: gradient-shift 15s ease infinite;
-    }
-
-    &:hover{
-        transform: translateY(-5px);
-        box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.6);
-    }
-
-    &:active{
-        transform: translateY(0);
-        box-shadow: none;
-    }
+.explore-button{
+    position: relative;
+    font-size: 2rem;
+    margin-top: 5rem;
+    padding: 2rem 8rem;
+    cursor: pointer;
 }
 
-@keyframes gradient-shift {
+.explore-button::after {
+    content: "";
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: blur(3rem);
+    opacity: 0.8;
+}
+
+.explore-button,
+.explore-button::after {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10rem;
+    background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+    background-size: 600%;
+    -webkit-animation: gradient-animation 16s linear infinite;
+    animation: gradient-animation 16s linear infinite;
+}
+
+@keyframes gradient-animation {
     0% {
-        background-position: 58% 50%;
+        background-position: 0% 50%;
     }
 
-    25% {
-        background-position: 100% 0%;
-    }
-
-    75% {
-        background-position: 10% 50%;
+    50% {
+        background-position: 100% 50%;
     }
 
     100% {
-        background-position: 58% 50%;
+        background-position: 0% 50%;
     }
 }
