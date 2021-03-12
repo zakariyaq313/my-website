@@ -1,45 +1,59 @@
 .section-about-me {
     position: relative;
-    padding: 10rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding: 10rem 15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    column-gap: 10rem;
     background-color: $background-light;
 
+    @include respond(1300px){
+        column-gap: 8rem;
+        padding: 10rem 12rem;
+    }
+
+    @include respond(1200px){
+        padding: 10rem;
+    }
+
     @include respond(1100px){
-        justify-content: space-between;
+        column-gap: 5rem;
+        padding: 10rem 8rem;
     }
 
     @include respond(1000px){
+        column-gap: 2rem;
         padding: 10rem 5rem;
     }
 
-    @include respond(900px){
-        flex-direction: column;
-        padding: 8rem 3rem 10rem;
+    @include respond(800px){
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+    }    
+
+    @include respond(700px){
+        padding: 10rem 5rem;
     }
 
-    @include respond(400px){
-        padding: 8rem 2rem 10rem;
+    @include respond(500px){
+        padding: 8rem 3rem 10rem;
     }
 
     img{
         width: 30rem;
+        width: 75%;
         border-radius: 0.8rem;
 
-        @include respond(900px){
+        @include respond(800px){
             width: 40rem;
-            margin-top: 5rem;
         }
         
-        @include respond(350px){
-            width: 35rem;
+        @include respond(400px){
+            width: 95%;
         }
-    }
-}
 
-.about-me h1{
-    @include respond(900px){
-        text-align: center;
+        @include respond(350px){
+            width: 100%;
+        }
     }
 }

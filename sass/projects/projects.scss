@@ -1,65 +1,94 @@
 .section-projects{
     text-align: center;
     position: relative;
-    padding: 5rem;
+    padding: 8rem 5rem;
+
+    @include respond(1300px){
+        padding: 8rem 0;
+    }
+
+    @include respond(1200px){
+        padding: 8rem 5rem;
+    }
+
+    @include respond(1100px){
+        padding: 8rem 3rem;
+    }
+
+    @include respond(800px){
+        padding: 8rem 5rem;
+    }
 
     @include respond(700px){
-        padding: 5rem 0;
+        padding: 8rem 2rem;
     }
 }
 
 .projects-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 5rem;
-    align-items: center;
+    place-items: center;
     margin-top: 5rem;
     position: relative;
 
     @include respond(1200px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(1000px){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(700px){
+        gap: 3rem;
+    }
+
+    @include respond(600px){
         grid-template-columns: 1fr;
-    }
-
-    @include respond(500px){
-        row-gap: 3rem;
-    }
-
-    @include respond(400px){
-        row-gap: 1.5rem;
+        row-gap: 5rem;
     }
 }
 
 .project-preview{
-    width: 55rem;
+    width: 28rem;
     border-radius: 0.8rem;
-    box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: 0.6);
-    position: relative;
+    transition: transform .3s;
 
-    @include respond(1300px){
-        width: 50rem;
-    }
-
-    @include respond(1200px){
-        width: 70rem;
-    }
-
-    @include respond(800px) {
-        width: 60rem;
+    @include respond(1000px){
+        width: 32rem;
     }
 
     @include respond(700px){
-        width: 55rem;
+        width: 30rem;
+    }
+
+    @include respond(600px){
+        width: 45rem;
+        box-shadow: 0 2px 12px rgba($color: #000, $alpha: 0.5);
     }
 
     @include respond(500px){
-        width: 48rem;
+        width: 80%;
     }
 
     @include respond(400px){
-        width: 40rem;
+        width: 85%;
     }
 
-    @include respond(350px){
-        width: 35rem;
+    &:hover{
+        box-shadow: 0 2rem 4rem rgba($color: #000, $alpha: 0.5);
+        transform: scale(1.05);
     }
+
+    @include respond(1100px){
+        &:hover{
+            box-shadow: none;
+            transform: none;
+        }
+    }
+}
+
+.project{
+    position: relative;
 }

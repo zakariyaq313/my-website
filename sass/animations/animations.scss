@@ -1,0 +1,47 @@
+// Animation for button
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// Animation for text
+@keyframes gradient-shift {
+    0% {
+        background-position: 58% 50%;
+    }
+
+    25% {
+        background-position: 100% 0%;
+    }
+
+    75% {
+        background-position: 10% 50%;
+    }
+
+    100% {
+        background-position: 58% 50%;
+    }
+}
+
+// Skeleton screen
+@keyframes shimmer {
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

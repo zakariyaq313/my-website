@@ -38,20 +38,11 @@ footer {
     }
 }
 
-.footer-link{
+.footer-link:link,
+.footer-link:visited{
     border-bottom: 1px solid #fff;
-    background-image: linear-gradient(to right, #fff, #fff);
-    background-size: 0 0;
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    padding: 2px 2px 0;
+    padding: 1px;
     line-height: 1.2;
-    transition: all .4s;
-
-    &:hover{
-        background-size: 100% 100%;
-        color: $background-dark;
-    }
 }
 
 .copyright {

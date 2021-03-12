@@ -12,6 +12,10 @@ html {
         font-size: 75%;
     }
 
+    @include respond(900px) {
+        font-size: 55%;
+    }
+
     @include respond(600px) {
         font-size: 50%;
     }
@@ -34,13 +38,11 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-a {
-    &:link,
-    &:visited {
-        display: inline-block;
-        text-decoration: none;
-        color: #fff;
-    }
+a:link,
+a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
 }
 
 p{
