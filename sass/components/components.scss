@@ -1,5 +1,5 @@
 // Links with background effect
-.rising-background{
+.rising-background {
     background-image: linear-gradient(to right, #fff, #fff);
     background-size: 0 0;
     background-position: 0 100%;
@@ -13,7 +13,7 @@
 }
 
 // Explore button
-.explore-button{
+.explore-button {
     position: relative;
     font-size: 2rem;
     margin-top: 5rem;
@@ -45,9 +45,14 @@
     animation: gradient-animation 16s linear infinite;
 }
 
+.slide-in {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}
+
 // Skeleton screen
 .skeleton-background::before,
-.skeleton-background::after{
+.skeleton-background::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -57,13 +62,13 @@
     left: 0;
 }
 
-.skeleton-background::before{
+.skeleton-background::before {
     z-index: 10;
     background-color: $background-lighter;
     animation: shimmer 2s infinite linear;
 }
 
-.skeleton-background::after{
+.skeleton-background::after {
     z-index: 5;
     background-color: $background-dark;
     box-shadow: 0 2px 12px rgba($color: #000, $alpha: 0.5);

@@ -38,6 +38,15 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+main {
+    overflow: hidden;
+}
+
+// section {
+//     transition: all 1.6s;
+//     opacity: 0;
+// }
+
 a:link,
 a:visited{
     display: inline-block;

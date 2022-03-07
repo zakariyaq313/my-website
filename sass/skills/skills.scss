@@ -2,6 +2,7 @@
     padding: 8rem 15rem;
     text-align: center;
     background-color: $background-light;
+    // transform: translateX(300px);
 
     @include respond(1100px){
         padding: 5rem 10rem;
@@ -38,5 +39,21 @@
 
     @include respond(350px){
         height: 5rem;
+    }
+}
+
+.typescript {
+    border-radius: 5px;
+}
+
+.vue, .tailwind {
+    height: 7rem;
+
+    @include respond(900px){
+        height: 5rem;
+    }
+
+    @include respond(350px){
+        height: 4rem;
     }
 }

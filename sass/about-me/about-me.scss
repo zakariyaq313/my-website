@@ -6,6 +6,7 @@
     place-items: center;
     column-gap: 10rem;
     background-color: $background-light;
+    // transform: translateX(300px);
 
     @include respond(1300px){
         column-gap: 8rem;

@@ -41,6 +41,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+main {
+  overflow: hidden;
+}
+
 a:link,
 a:visited {
   display: inline-block;
@@ -94,6 +98,11 @@ p {
   background-size: 600%;
   -webkit-animation: gradient-animation 16s linear infinite;
   animation: gradient-animation 16s linear infinite;
+}
+
+.slide-in {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }
 
 .skeleton-background::before,
@@ -610,6 +619,24 @@ nav {
   }
 }
 
+.typescript {
+  border-radius: 5px;
+}
+
+.vue, .tailwind {
+  height: 7rem;
+}
+@media (max-width: 900px) {
+  .vue, .tailwind {
+    height: 5rem;
+  }
+}
+@media (max-width: 350px) {
+  .vue, .tailwind {
+    height: 4rem;
+  }
+}
+
 footer {
   position: relative;
   text-align: center;
@@ -623,6 +650,7 @@ footer {
 }
 
 .social-icon {
+  height: 2.5rem;
   margin: 0 1rem;
   cursor: pointer;
   transition: transform 0.3s;
