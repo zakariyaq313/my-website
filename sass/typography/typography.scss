@@ -30,23 +30,18 @@
 
 .paragraph {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.8rem;
-    line-height: 1.8;
+    font-size: 2rem;
     text-align: left;
     margin-top: 2rem;
 
     @include respond(600px){
         font-size: 2.2rem;
     }
-    
-    @include respond(400px){
-        font-size: 2rem;
-    }
 }
 
 .section-about-me h1,
 .paragraph{
-    @include respond(800px){
+    @include respond(700px){
         text-align: center;
     }
 }
@@ -55,7 +50,7 @@
     font-size: 1.2rem;
 
     @include respond(600px){
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }
 

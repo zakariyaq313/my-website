@@ -45,3 +45,14 @@
         opacity: 1;
     }
 }
+
+// React easter egg on hover
+@keyframes easter-egg {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

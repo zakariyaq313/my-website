@@ -1,22 +1,35 @@
 # **My personal website**
 
 <a href="https://zakariyaq313.github.io/my_website/" target="_blank"><img src="images/version-6.png"></a>
+&nbsp;
 
-<h1 style="margin-top: 50px;">History</h1>
-<p>Version - 1</p>
-<img src="images/version-1.png">
+# **History**
 
-<p style="margin-top: 20px">Version - 2</p>
-<img src="images/version-2.png">
+Version - 1
 
-<p style="margin-top: 20px">Version - 3</p>
-<img src="images/version-3.png">
+![Version 1](images/version-1.png)
+&nbsp;
 
-<p style="margin-top: 20px">Version - 4</p>
-<img src="images/version-4.png">
+Version - 2
 
-<p style="margin-top: 20px">Version - 5</p>
-<img src="images/version-5.png">
+![Version 2](images/version-2.png)
+&nbsp;
 
-<p style="margin-top: 20px">Version - 6</p>
-<img src="images/version-6.png">
+Version - 3
+
+![Version 3](images/version-3.png)
+&nbsp;
+
+Version - 4
+
+![Version 4](images/version-4.png)
+&nbsp;
+
+Version - 5
+
+![Version 5](images/version-5.png)
+&nbsp;
+
+Version - 6
+
+![Version 6](images/version-6.png)

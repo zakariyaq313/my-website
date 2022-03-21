@@ -36,6 +36,21 @@ body {
     color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+    scrollbar-color: #8d99ae #444e5f;
+
+    &::-webkit-scrollbar {
+        width: 1.2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #444e5f;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #8d99ae;
+        border: 3px solid #444e5f;
+        border-radius: 1rem;
+    }
 }
 
 main {
@@ -54,6 +69,6 @@ a:visited{
     color: #fff;
 }
 
-p{
+p {
     line-height: 1.6;
 }

@@ -1,59 +1,48 @@
 .section-about-me {
-    position: relative;
-    padding: 10rem 15rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    column-gap: 10rem;
     background-color: $background-light;
+    display: flex;
+    align-items: center;
+    column-gap: 10rem;
+    padding: 6rem 10rem;
     // transform: translateX(300px);
 
-    @include respond(1300px){
-        column-gap: 8rem;
-        padding: 10rem 12rem;
-    }
-
-    @include respond(1200px){
-        padding: 10rem;
-    }
-
     @include respond(1100px){
-        column-gap: 5rem;
-        padding: 10rem 8rem;
-    }
-
-    @include respond(1000px){
-        column-gap: 2rem;
-        padding: 10rem 5rem;
+        column-gap: 8rem;
+        padding: 6rem;
     }
 
     @include respond(800px){
-        grid-template-columns: 1fr;
-        row-gap: 5rem;
+        column-gap: 4rem;
+        padding: 4rem;
     }    
 
     @include respond(700px){
-        padding: 10rem 5rem;
+        flex-direction: column;
+        row-gap: 6rem;
+        padding: 10rem 4rem;
     }
 
     @include respond(500px){
-        padding: 8rem 3rem 10rem;
+        padding: 10rem 3rem;
+    }
+
+    @include respond(400px){
+        padding-top: 8rem;
     }
 
     img{
-        width: 30rem;
-        width: 75%;
-        border-radius: 0.8rem;
+        width: 36rem;
+        border-radius: 6px;
 
-        @include respond(800px){
-            width: 40rem;
+        @include respond(700px){
+            width: 80%;
         }
         
-        @include respond(400px){
+        @include respond(500px){
             width: 95%;
         }
 
-        @include respond(350px){
+        @include respond(400px){
             width: 100%;
         }
     }

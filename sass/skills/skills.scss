@@ -1,19 +1,19 @@
 .section-skills {
-    padding: 8rem 15rem;
+    padding: 6rem 12rem 8rem;
     text-align: center;
     background-color: $background-light;
     // transform: translateX(300px);
 
     @include respond(1100px){
-        padding: 5rem 10rem;
+        padding-inline: 10rem;
     }
 
     @include respond(800px){
-        padding: 5rem;
+        padding-inline: 6rem;
     }
 
     @include respond(500px){
-        padding: 5rem 0;
+        padding-inline: 1rem;
     }
 }
 
@@ -22,10 +22,14 @@
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
     row-gap: 10rem;
-    margin-top: 10rem;
+    margin-top: 8rem;
 
-    @include respond(900px){
+    @include respond(800px){
         margin-top: 6rem;
+        row-gap: 8rem;
+    }
+
+    @include respond(600px){
         row-gap: 6rem;
     }
 }
@@ -34,12 +38,16 @@
     height: 8rem;
 
     @include respond(900px){
-        height: 6rem;
+        height: 7rem;
     }
 
-    @include respond(350px){
-        height: 5rem;
+    @include respond(400px){
+        height: 6rem;
     }
+}
+
+.react:hover {
+    animation: easter-egg infinite linear 4s;
 }
 
 .typescript {
@@ -50,10 +58,10 @@
     height: 7rem;
 
     @include respond(900px){
-        height: 5rem;
+        height: 6rem;
     }
 
-    @include respond(350px){
-        height: 4rem;
+    @include respond(400px){
+        height: 5rem;
     }
 }
