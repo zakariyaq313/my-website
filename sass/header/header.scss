@@ -4,6 +4,10 @@ header {
     overflow-x: hidden;
     padding: 3rem;
     text-align: center;
+
+    @include respond(600px) {
+        height: max(92vh, 60rem);
+    }
 }
 
 nav {
@@ -121,8 +125,8 @@ nav {
 }
 
 .explore-button {
-    @include respond(600px){
-        font-size: 2.4rem;
-        padding: 2.4rem 10rem;
+    @include respond(600px) {
+        font-size: 2.2rem;
+        padding: 2.4rem 8rem;
     }
 }

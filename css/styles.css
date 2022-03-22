@@ -234,6 +234,12 @@ p {
     text-align: center;
   }
 }
+@media (max-width: 400px) {
+  .section-about-me h1,
+.paragraph {
+    text-align: left;
+  }
+}
 
 .copyright {
   font-size: 1.2rem;
@@ -261,6 +267,11 @@ header {
   overflow-x: hidden;
   padding: 3rem;
   text-align: center;
+}
+@media (max-width: 600px) {
+  header {
+    height: max(92vh, 60rem);
+  }
 }
 
 nav {
@@ -373,8 +384,8 @@ nav {
 
 @media (max-width: 600px) {
   .explore-button {
-    font-size: 2.4rem;
-    padding: 2.4rem 10rem;
+    font-size: 2.2rem;
+    padding: 2.4rem 8rem;
   }
 }
 
@@ -681,7 +692,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
-  row-gap: 10rem;
+  row-gap: 12rem;
   margin-top: 8rem;
 }
 @media (max-width: 800px) {
