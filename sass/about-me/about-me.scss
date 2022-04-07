@@ -19,15 +19,15 @@
     @include respond(700px){
         flex-direction: column;
         row-gap: 6rem;
-        padding: 10rem 4rem;
+        padding-block: 8rem 10rem;
     }
 
     @include respond(500px){
-        padding: 10rem 3rem;
+        padding-inline: 3rem;
     }
 
     @include respond(400px){
-        padding-top: 8rem;
+        padding-block: 6rem 8rem;
     }
 
     img{

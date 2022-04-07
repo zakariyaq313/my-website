@@ -1,8 +1,8 @@
 (function () {
     "use strict";
     // Menu button toggle
-    let menu = document.querySelector("span.menu-button");
-    let navbar = document.querySelector("div.navbar");
+    const menu = document.querySelector("span.menu-button");
+    const navbar = document.querySelector("div.navbar");
     menu.addEventListener("click", () => {
         menu.classList.toggle("menu-open");
         navbar.classList.toggle("navbar-open");
@@ -22,9 +22,9 @@
     // Projects show more button toggle
     const projects = document.querySelectorAll(".project");
     const showMoreProjects = document.querySelector(".show-more");
-    let screenLarge = window.matchMedia("(min-width: 1201px)");
-    let screenSmall = window.matchMedia("(max-width: 1000px)");
-    let invisibleProjects = [];
+    const screenLarge = window.matchMedia("(min-width: 1201px)");
+    const screenSmall = window.matchMedia("(max-width: 1000px)");
+    const invisibleProjects = [];
 
     const hideProjects = (i) => {
         for (i; i < projects.length; i++) {

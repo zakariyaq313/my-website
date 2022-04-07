@@ -30,6 +30,7 @@
     }
 
     @include respond(600px){
+        margin-top: 4rem;
         row-gap: 6rem;
     }
 }

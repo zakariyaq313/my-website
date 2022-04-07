@@ -44,10 +44,6 @@
     @include respond(700px){
         text-align: center;
     }
-
-    @include respond(400px){
-        text-align: left;
-    }
 }
 
 .copyright{
