@@ -416,7 +416,8 @@ nav {
 }
 @media (max-width: 400px) {
   .section-about-me {
-    padding-block: 6rem 8rem;
+    padding-block: 8rem;
+    row-gap: 4rem;
   }
 }
 .section-about-me img {
