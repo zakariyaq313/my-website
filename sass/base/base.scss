@@ -25,13 +25,7 @@ html {
     }
 }
 
-@font-face{
-    font-family: "Product-Sans";
-    src: url("../fonts/Product Sans Regular.ttf");
-}
-
 body {
-    font-family: "Product-Sans";
     background-color: $background-dark;
     color: #fff;
     -webkit-text-size-adjust: 100%;
@@ -63,7 +57,7 @@ main {
 // }
 
 a:link,
-a:visited{
+a:visited {
     display: inline-block;
     text-decoration: none;
     color: #fff;

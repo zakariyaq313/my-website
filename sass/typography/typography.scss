@@ -1,3 +1,12 @@
+@font-face{
+    font-family: "Glacial Indifference";
+    src: url("../fonts/Glacial Indifference Regular.otf");
+}
+
+body {
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
 .nav-link{
     font-size: 1.6rem;
 
@@ -29,7 +38,7 @@
 }
 
 .paragraph {
-    font-family: 'Source Sans Pro', sans-serif;
+    color: rgba($color: #fff, $alpha: 0.8);
     font-size: 2rem;
     text-align: left;
     margin-top: 2rem;

@@ -29,12 +29,7 @@ html {
   }
 }
 
-@font-face {
-  font-family: "Product-Sans";
-  src: url("../fonts/Product Sans Regular.ttf");
-}
 body {
-  font-family: "Product-Sans";
   background-color: #131820;
   color: #fff;
   -webkit-text-size-adjust: 100%;
@@ -184,6 +179,14 @@ p {
     transform: rotate(360deg);
   }
 }
+@font-face {
+  font-family: "Glacial Indifference";
+  src: url("../fonts/Glacial Indifference Regular.otf");
+}
+body {
+  font-family: "Glacial Indifference", sans-serif;
+}
+
 .nav-link {
   font-size: 1.6rem;
 }
@@ -217,7 +220,7 @@ p {
 }
 
 .paragraph {
-  font-family: "Source Sans Pro", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 2rem;
   text-align: left;
   margin-top: 2rem;
@@ -372,7 +375,7 @@ nav {
 
 .code {
   fill: #fff;
-  height: 7rem;
+  height: 6rem;
   vertical-align: middle;
 }
 
@@ -596,7 +599,8 @@ nav {
   border-radius: 10rem;
   font-size: 2rem;
   padding: 1rem;
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  width: 90%;
 }
 @media (max-width: 600px) {
   .project-info .project-link:link,
@@ -641,7 +645,7 @@ nav {
 }
 .show-more svg {
   fill: #fff;
-  height: 2rem;
+  height: 1.8rem;
   transition: transform 0.2s, fill 0.4s;
 }
 .show-more span:nth-of-type(2) {
@@ -755,18 +759,11 @@ footer {
   height: 2.5rem;
   margin: 0 1rem;
   cursor: pointer;
-  transition: transform 0.2s;
 }
 @media (max-width: 600px) {
   .social-icon {
     height: 3rem;
   }
-}
-.social-icon:hover {
-  transform: scale(1.2);
-}
-.social-icon:active {
-  transform: scale(1);
 }
 
 .footer-link:link,
@@ -777,14 +774,14 @@ footer {
 }
 
 .copyright {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 .copyright p:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 3px;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 .copyright p:last-of-type svg {
   fill: #fff;
