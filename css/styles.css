@@ -345,12 +345,8 @@ nav {
   transition: all 0.5s;
 }
 
-.menu-open {
-  background-color: #fff;
-}
 .menu-open::before, .menu-open::after {
   width: 3rem;
-  background-color: #000;
   top: 50%;
 }
 .menu-open::before {

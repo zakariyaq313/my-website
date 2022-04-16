@@ -19,7 +19,7 @@ nav {
 .navbar{
     transition: all .4s;
 
-    @include respond(1000px){
+    @include respond(1000px) {
         transform: translateX(200%);
         opacity: 0;
     }
@@ -32,7 +32,7 @@ nav {
         margin-right: 2rem;
     }
 
-    @include respond(1000px){
+    @include respond(1000px) {
         padding: 0;
 
         &:not(:last-of-type) {
@@ -45,7 +45,7 @@ nav {
         }
     }
 
-    @include respond(400px){
+    @include respond(400px) {
         &:not(:last-of-type) {
             margin-right: 3rem;
         }
@@ -87,25 +87,22 @@ nav {
     transition: all .5s;
 }
 
-.menu-open{
-    background-color: #fff;
-
-    &::before, &::after{
+.menu-open {
+    &::before, &::after {
         width: 3rem;
-        background-color: #000;
         top: 50%;
     }
 
-    &::before{
+    &::before {
         transform: translate(-50%, -50%) rotate(45deg);
     }
 
-    &::after{
+    &::after {
         transform: translate(-50%, -50%) rotate(-45deg);
     }
 }
 
-.navbar-open{
+.navbar-open {
     transform: translateY(0);
     opacity: 1;
 }
