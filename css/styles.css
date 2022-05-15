@@ -725,16 +725,16 @@ nav {
   border-radius: 5px;
 }
 
-.vue, .tailwind {
+.vue {
   height: 7rem;
 }
 @media (max-width: 900px) {
-  .vue, .tailwind {
+  .vue {
     height: 6rem;
   }
 }
 @media (max-width: 400px) {
-  .vue, .tailwind {
+  .vue {
     height: 5rem;
   }
 }

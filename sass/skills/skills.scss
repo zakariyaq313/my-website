@@ -55,7 +55,7 @@
     border-radius: 5px;
 }
 
-.vue, .tailwind {
+.vue {
     height: 7rem;
 
     @include respond(900px){
