@@ -481,6 +481,9 @@ nav {
 
 .project {
   position: relative;
+  height: auto;
+  transition: height 0.4s;
+  will-change: height;
 }
 .project .project-preview:hover ~ .project-info,
 .project .project-info:hover {
@@ -554,14 +557,30 @@ nav {
     font-size: 2.4rem;
   }
 }
+.project-info .project-source {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+.project-info .project-source a:link, .project-info .project-source a:visited {
+  color: cyan;
+  transition: opacity 0.2s;
+}
+@media (hover: hover) {
+  .project-info .project-source a:hover {
+    opacity: 0.6;
+  }
+}
+.project-info .project-source a:active {
+  opacity: 0.6;
+}
 .project-info .project-stack {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .project-info .project-stack b {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   margin-right: 1rem;
 }
@@ -582,7 +601,7 @@ nav {
 }
 .project-info .project-timeline {
   font-size: 1.6rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 @media (max-width: 600px) {
   .project-info .project-timeline {
@@ -595,7 +614,7 @@ nav {
   border-radius: 10rem;
   font-size: 2rem;
   padding: 1rem;
-  margin: 2rem auto 0;
+  margin: 3rem auto 0;
   width: 90%;
 }
 @media (max-width: 600px) {
@@ -622,6 +641,7 @@ nav {
   justify-content: center;
   font-family: inherit;
   font-size: 2rem;
+  font-weight: 600;
   height: 6rem;
   padding: 0 3.4rem;
   position: absolute;
@@ -650,6 +670,7 @@ nav {
 
 .hide-project {
   display: none;
+  height: 0;
 }
 
 .projects-visible svg {
@@ -719,10 +740,6 @@ nav {
 
 .react:hover {
   animation: easter-egg infinite linear 4s;
-}
-
-.typescript {
-  border-radius: 5px;
 }
 
 .vue {
