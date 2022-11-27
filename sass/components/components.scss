@@ -12,16 +12,16 @@
     }
 }
 
-// Explore button
-.explore-button {
+// Connect with me button
+.contact-button {
     position: relative;
     font-size: 2rem;
-    margin-top: 5rem;
-    padding: 2rem 8rem;
+    margin-top: 4rem;
+    padding: 2rem 6rem;
     cursor: pointer;
 }
 
-.explore-button::after {
+.contact-button::after {
     content: "";
     height: 95%;
     width: 95%;
@@ -34,8 +34,8 @@
     opacity: 0.8;
 }
 
-.explore-button,
-.explore-button::after {
+.contact-button,
+.contact-button::after {
     display: inline-block;
     color: rgba(255, 255, 255, 0.9);
     border-radius: 10rem;
@@ -72,4 +72,14 @@
     z-index: 5;
     background-color: $background-dark;
     box-shadow: 0 2px 12px rgba($color: #000, $alpha: 0.5);
+}
+
+.square-button {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 1.2rem 4rem;
 }

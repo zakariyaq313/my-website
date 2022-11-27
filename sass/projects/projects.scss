@@ -1,15 +1,14 @@
-.section-projects{
+#section-projects {
     text-align: center;
     padding: 6rem 4rem 18rem;
     position: relative;
-    // transform: translateX(-300px);
 
     @include respond(800px) {
         padding: 6rem 3rem 18rem;
     }
 }
 
-.projects-container{
+.projects-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem 3rem;
@@ -47,7 +46,7 @@
     }
 }
 
-.project-preview{
+.project-preview {
     width: 100%;
     border-radius: 5px;
     transition: transform .3s;
@@ -117,17 +116,13 @@
         }
 
         a:link, a:visited {
-            transition: opacity 0.2s;
+            border-bottom: 1px solid #fff;
+            padding: 0 1px;
+            line-height: 1.2;
         }
 
-        @media (hover: hover) {
-            a:hover {
-                opacity: 0.6;
-            }   
-        }
-
-        a:active {
-            opacity: 0.6;
+        a:hover {
+            color: #444e5f;
         }
     }
 
@@ -169,12 +164,8 @@
 
     .project-link:link,
     .project-link:visited {
-        border: 2px solid #fff;
-        border-radius: 10rem;
-        font-size: 2rem;
-        padding: 1rem;
         margin: 3rem auto 0;
-        width: 90%;
+        width: 95%;
 
         @include respond(600px) {
             font-size: 2.2rem;
@@ -188,64 +179,32 @@
     }
 }
 
-.show-more {
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 10rem;
-    cursor: pointer;
-    display: flex;
-    column-gap: 1.4rem;
-    align-items: center;
-    justify-content: center;
-    font-family: inherit;
-    font-size: 2rem;
-    height: 6rem;
-    padding: 0 3.4rem;
-    position: absolute;
-    left: 50%;
-    bottom: 6rem;
-    transform: translateX(-50%);
+.more-projects {
+    &:link, &:visited {
+        display: flex;
+        column-gap: 4px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        bottom: 6rem;
+        transform: translateX(-50%);
 
-    @include respond(600px) {
-        height: 7rem;
-        bottom: 5.5rem;
-        font-size: 2.2rem;
-    }
-
-    &:hover {
-        svg {
-            fill: $background-dark;
+        @include respond(600px) {
+            bottom: 5.5rem;
+            font-size: 2.2rem;
         }
-    }
 
-    svg {
-        fill: #fff;
-        height: 1.8rem;
-        transition: transform 0.2s, fill 0.4s;
-    }
-
-    span:nth-of-type(2) {
-        display: none;
-    }
-}
-
-// Handled via JavaScript
-.hide-project {
-    display: none;
-    height: 0;
-}
-
-.projects-visible {
-    svg {
-        transform: rotate(180deg);
-    }
-
-    span:nth-of-type(1) {
-        display: none;
-    }
-
-    span:nth-of-type(2) {
-        display: inline;
+        &:hover {
+            svg {
+                fill: $background-dark;
+            }
+        }
+    
+        svg {
+            fill: #fff;
+            height: 1.8rem;
+            transition: transform 0.2s, fill 0.4s;
+        }
     }
 }

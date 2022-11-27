@@ -1,20 +1,20 @@
-@font-face{
+@font-face {
     font-family: "Glacial Indifference";
-    src: url("../fonts/Glacial Indifference Regular.otf");
+    src: url("../font/Glacial Indifference Regular.otf");
 }
 
 body {
     font-family: 'Glacial Indifference', sans-serif;
 }
 
-.nav-link{
+.nav-link {
     font-size: 1.6rem;
 
-    @include respond(600px){
+    @include respond(600px) {
         font-size: 1.8rem;
     }
 
-    @include respond(350px){
+    @include respond(350px) {
         font-size: 1.6rem;
     }
 }
@@ -24,15 +24,15 @@ body {
     font-weight: 400;
 }
 
-.section-about-me h1,
-.section-projects h1{
-    @include respond(600px){
+#section-about-me h1,
+#section-projects h1 {
+    @include respond(600px) {
         font-size: 5.5rem;
     }
 }
 
-.section-skills h1{
-    @include respond(400px){
+#section-skills h1 {
+    @include respond(400px) {
         font-size: 4.5rem;
     }
 }
@@ -43,22 +43,21 @@ body {
     text-align: left;
     margin-top: 2rem;
 
-    @include respond(600px){
+    @include respond(600px) {
         font-size: 2.2rem;
     }
 }
 
-.section-about-me h1,
-.paragraph{
+#section-about-me h1, .paragraph {
     @include respond(700px){
         text-align: center;
     }
 }
 
-.copyright{
+.copyright {
     font-size: 1.2rem;
 
-    @include respond(600px){
+    @include respond(600px) {
         font-size: 1.6rem;
     }
 }
@@ -74,7 +73,6 @@ body {
     background-size: 500%;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-animation: gradient-shift 30s ease infinite;
     animation: gradient-shift 30s ease infinite;
     color: transparent;
 }

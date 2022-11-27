@@ -16,7 +16,7 @@ nav {
     align-items: center;
 }
 
-.navbar{
+.navbar {
     transition: all .4s;
 
     @include respond(1000px) {
@@ -62,7 +62,7 @@ nav {
     transition: all .3s;
     display: none;
 
-    @include respond(1000px){
+    @include respond(1000px) {
         display: inline-block;
     }
 
@@ -121,7 +121,7 @@ nav {
     vertical-align: middle;
 }
 
-.explore-button {
+.contact-button {
     @include respond(600px) {
         font-size: 2.2rem;
         padding: 2.4rem 8rem;
